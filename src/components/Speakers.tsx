@@ -193,11 +193,11 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
           >
-            Speakers
+            Expert Workshop Leaders and Mentors
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
-            Learn from the experts on the cutting-edge of deception at the most
-            sinister companies.
+            Learn from Stanford GSE faculty, industry experts, and experienced
+            mentors who will guide you through the hackathon journey.
           </p>
         </div>
         <TabGroup
