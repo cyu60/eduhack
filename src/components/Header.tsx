@@ -17,7 +17,7 @@ export function Header() {
               <time dateTime="2025-06-13">13</time>-
               <time dateTime="2025-06-14">14 June, 2025</time>
             </p>
-            <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" />
+            {/* <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" /> */}
             <p>Stanford GSE, CERAS</p>
           </div>
         </div>
