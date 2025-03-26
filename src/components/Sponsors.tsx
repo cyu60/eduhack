@@ -21,10 +21,10 @@ export function Sponsors() {
   return (
     <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
       <Container>
-        <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
+        <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
           Supported by leading organizations across education and technology.
         </h2>
-        <p className="mx-auto mt-4 max-w-2xl text-center text-lg tracking-tight text-blue-900">
+        <p className="mx-auto mt-4 max-w-2xl text-center text-lg tracking-tight text-[var(--darkRed)]">
           Join our diverse community of sponsors who are committed to
           transforming education through innovative technology solutions.
         </p>
@@ -35,7 +35,7 @@ export function Sponsors() {
               className="flex flex-col items-center justify-center space-y-2"
             >
               <Image src={sponsor.logo} alt={sponsor.name} unoptimized />
-              <span className="text-sm font-medium text-blue-600">
+              <span className="text-sm font-medium text-[var(--red)]">
                 {sponsor.category}
               </span>
             </div>
