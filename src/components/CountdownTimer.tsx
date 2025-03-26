@@ -5,7 +5,6 @@ import { BackgroundImage } from "@/components/BackgroundImage"
 import dynamic from "next/dynamic"
 import "@leenguyen/react-flip-clock-countdown/dist/index.css"
 
-// Dynamically import FlipClockCountdown with SSR disabled
 const FlipClockCountdown = dynamic(
   () => import("@leenguyen/react-flip-clock-countdown"),
   { ssr: false }
