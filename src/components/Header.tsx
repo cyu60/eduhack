@@ -6,7 +6,7 @@ import '@/app/global.css'
 
 export function Header() {
   return (
-    <header className="relative z-50 flex-none lg:pt-6">
+    <header className="relative z-50 flex-none lg:pt-10">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
         <div className="flex items-center mt-10 lg:mt-0 lg:grow lg:basis-0">
           <Image src={headerLogo} alt="EduHack" width={180} height={32} />
@@ -17,7 +17,7 @@ export function Header() {
               <time dateTime="2024-06-07">13</time>-
               <time dateTime="2024-06-08">14 June, 2025</time>
             </p>
-            {/* <DiamondIcon className="h-1.5 w-1.5 overflow-visible fill-current stroke-current" /> */}
+            <span className="hidden md:inline">|</span>
             <p>Stanford GSE, CERAS</p>
           </div>
         </div>

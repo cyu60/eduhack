@@ -19,24 +19,21 @@ export function BackgroundImage({
   return (
     <div
       className={cn(
-        "absolute inset-0 overflow-hidden transition-opacity duration-500",
+        "absolute inset-0 overflow-hidden bg-gradient-to-b from-background to-background/80 transition-opacity duration-500",
         position === "left" ? "bg-left" : "bg-right",
         mounted ? "opacity-100" : "opacity-0",
         className,
       )}
-      style={{
-        background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
-      }}
     >
       <div
-        className={cn("absolute inset-0")}
-        style={{
-          background:
-            position === "left"
-              ? `linear-gradient(to right, transparent, var(--cream, --bgRed))`
-              : `linear-gradient(to left, transparent, var(--cream, --bgRed))`,
-        }}
+        className={cn(
+          "absolute inset-0 bg-gradient-to-b from-transparent to-primary/10",
+          position === "left"
+            ? "bg-gradient-to-r from-transparent to-primary/5"
+            : "bg-gradient-to-l from-transparent to-primary/5",
+        )}
       />
     </div>
   )
 }
+

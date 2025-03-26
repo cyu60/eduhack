@@ -188,14 +188,14 @@ export function Speakers() {
     >
       <ImageClipPaths id={id} />
       <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0">
+        <div className="mx-auto max-w-4xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
           >
             Expert Workshop Leaders and Mentors
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--grey)]">
             Learn from Stanford GSE faculty, industry experts, and experienced
             mentors who will guide you through the hackathon journey.
           </p>
@@ -224,7 +224,7 @@ export function Speakers() {
                           className={clsx(
                             'font-mono text-sm',
                             dayIndex === selectedIndex
-                              ? 'text-blue-600'
+                              ? 'text-[var(--red)]'
                               : 'text-slate-500',
                           )}
                         >
@@ -235,7 +235,7 @@ export function Speakers() {
                         </div>
                         <time
                           dateTime={day.dateTime}
-                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-blue-900"
+                          className="mt-1.5 block text-2xl font-semibold tracking-tight text-[var(--darkRed)]"
                         >
                           {day.date}
                         </time>
