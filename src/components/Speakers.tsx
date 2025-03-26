@@ -215,7 +215,7 @@ export function Speakers() {
                         className={clsx(
                           'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
                           dayIndex === selectedIndex
-                            ? 'fill-blue-600 stroke-blue-600'
+                            ? 'fill-[var(--red)] stroke-[var(--red)]'
                             : 'fill-transparent stroke-slate-400',
                         )}
                       />
@@ -260,9 +260,9 @@ export function Speakers() {
                         className={clsx(
                           'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
                           [
-                            'border-blue-300',
-                            'border-indigo-300',
-                            'border-sky-300',
+                            'border-red-800',
+                            'border-red-800',
+                            'border-red-800',
                           ][speakerIndex % 3],
                         )}
                       />
