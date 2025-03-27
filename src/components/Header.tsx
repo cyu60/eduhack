@@ -11,7 +11,7 @@ export function Header() {
         <div className="flex items-center mt-10 lg:mt-0 lg:grow lg:basis-0">
           <Image src={headerLogo} alt="EduHack" width={180} height={32} />
         </div>
-        <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto border-b border-blue-600/10 py-4 font-mono text-sm whitespace-nowrap text-blue-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
+        <div className="hidden sm:order-first sm:-mx-4 sm:flex sm:flex-auto sm:basis-full sm:overflow-x-auto sm:border-red-600/10 sm:py-4 sm:font-mono sm:text-sm sm:whitespace-nowrap sm:text-blue-600 sm:sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
           <div className="mx-auto flex items-center gap-4 px-4 text-[var(--darkRed)]">
             <p>
               <time dateTime="2024-06-07">13</time>-
