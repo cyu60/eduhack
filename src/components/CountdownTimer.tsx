@@ -21,7 +21,7 @@ export function CountdownTimer() {
           <h2 className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl">
             The journey begins soon
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--grey)]">
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
             Join us for an intensive weekend at Stanford GSE to reimagine the future of education through technology.
           </p>
         </div>
@@ -44,7 +44,7 @@ export function CountdownTimer() {
           </div>
 
           <div className="mt-16 text-center">
-            <p className="text-xl text-[var(--grey)]">
+            <p className="text-xl text-[var(--gray)]">
               Schedule will be revealed soon
             </p>
           </div>

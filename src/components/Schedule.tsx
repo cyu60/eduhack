@@ -305,7 +305,7 @@ export function Schedule() {
           <h2 className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl">
             A transformative journey from in-person innovation to global impact.
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--grey)]">
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
             Join us for an intensive weekend at Stanford GSE, followed by a
             two-month global open call to reimagine the future of education
             through technology.

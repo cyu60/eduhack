@@ -12,7 +12,7 @@ export function Hero() {
             <span className="hidden">EduHack - </span>Reimagining Education
             Through Technology
           </h1>
-          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--grey)]">
+          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
             <p>
               EduHack is Stanford GSE's first hackathon that bridges education
               and technology to create mutual impact. We invite organizations to

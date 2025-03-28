@@ -195,7 +195,7 @@ export function Speakers() {
           >
             Expert Workshop Leaders and Mentors
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--grey)]">
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
             Learn from Stanford GSE faculty, industry experts, and experienced
             mentors who will guide you through the hackathon journey.
           </p>
