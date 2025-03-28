@@ -31,7 +31,7 @@ export function Hero() {
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Hackers', '1K+'],
-              ['Event Duration', '2 Days + 2 Months'],
+              ['Event Duration', '2 Days (In-person) + 2 Months (Online)'],
               ['Venue', 'CERAS'],
               ['Location', 'Stanford GSE'],
             ].map(([name, value]) => (
