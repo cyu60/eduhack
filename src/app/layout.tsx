@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: 'EduHack',
   },
   description:
-    'At DeceptiConf you’ll learn about the latest dark patterns being developed to trick even the smartest visitors, and you’ll learn how to deploy them without ever being detected.',
+    "Stanford GSE's first hackathon that bridges education and technology to create mutual impact.",
 }
 
 export default function RootLayout({

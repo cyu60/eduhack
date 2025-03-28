@@ -45,7 +45,7 @@ export function CountdownTimer() {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-base text-[var(--grey)] sm:text-xl">
+            <p className="text-base text-[var(--gray)] sm:text-xl">
               Schedule will be revealed soon
             </p>
           </div>

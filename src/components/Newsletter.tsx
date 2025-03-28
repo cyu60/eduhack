@@ -23,7 +23,7 @@ export function Newsletter() {
   return (
     <section id="newsletter" aria-label="Newsletter">
       <Container>
-        <div className="relative -mx-4 overflow-hidden bg-grey-100/50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">
+        <div className="relative -mx-4 overflow-hidden bg-gray-100/50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">
           <BackgroundImage className="absolute inset-0" position="left" />
           <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
             <div>
