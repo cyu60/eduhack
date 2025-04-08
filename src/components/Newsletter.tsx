@@ -1,10 +1,11 @@
-"use client"
+'use client'
 
-import { Button } from "@/components/Button"
-import { Container } from "@/components/Container"
-import { BackgroundImage } from "@/components/BackgroundImage"
+import { Button } from '@/components/Button'
+import { Container } from '@/components/Container'
+import { BackgroundImage } from '@/components/BackgroundImage'
+import { FormEvent, useState } from 'react'
 
-function ArrowRightIcon(props: React.ComponentPropsWithoutRef<"svg">) {
+function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
       <path
@@ -20,6 +21,29 @@ function ArrowRightIcon(props: React.ComponentPropsWithoutRef<"svg">) {
 }
 
 export function Newsletter() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault()
+
+    try {
+      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSewL_rCL6TTcngKOodGKmkAcc2J2rW7KeIYQlQ87gVWHHoIGg/formResponse?usp=pp_url&entry.370492761=${encodeURIComponent(email)}`
+
+      // Using fetch to submit the form
+      await fetch(formUrl, {
+        method: 'GET',
+        mode: 'no-cors', // Google Forms requires no-cors mode
+      })
+
+      setStatus('success')
+      setEmail('')
+    } catch (error) {
+      setStatus('error')
+      console.error('Error submitting form:', error)
+    }
+  }
+
   return (
     <section id="newsletter" aria-label="Newsletter">
       <Container>
@@ -31,11 +55,12 @@ export function Newsletter() {
                 Join the Innovation
               </p>
               <p className="mt-4 text-lg tracking-tight text-[var(--darkRed)]">
-                Stay updated on EduHack events, sponsorship opportunities, and be the
-                first to know when registration opens for both in-person and online phases.
+                Stay updated on EduHack events, sponsorship opportunities, and
+                be the first to know when registration opens for both in-person
+                and online phases.
               </p>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
               <h3 className="text-lg font-semibold tracking-tight text-[var(--darkRed)]">
                 Subscribe to our updates <span aria-hidden="true">&darr;</span>
               </h3>
@@ -45,6 +70,8 @@ export function Newsletter() {
                   required
                   placeholder="Enter your email"
                   aria-label="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   className="-my-2.5 flex-auto bg-transparent pr-2.5 pl-6 text-base text-slate-900 placeholder:text-slate-400 focus:outline-hidden"
                 />
                 <Button type="submit">
@@ -54,8 +81,19 @@ export function Newsletter() {
                   </span>
                 </Button>
               </div>
+              {status === 'success' && (
+                <p className="mt-3 text-sm text-green-600">
+                  Thank you for subscribing!
+                </p>
+              )}
+              {status === 'error' && (
+                <p className="mt-3 text-sm text-red-600">
+                  There was an error subscribing. Please try again.
+                </p>
+              )}
               <p className="mt-3 text-sm text-red-900/60">
-                Get notified about registration deadlines, workshops, and sponsorship opportunities.
+                Get notified about registration deadlines, workshops, and
+                sponsorship opportunities.
               </p>
             </form>
           </div>

@@ -7,7 +7,7 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import { DiamondIcon } from '@/components/DiamondIcon'
-import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
+/* import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
 import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
 import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
 import dianneGuilianelliImage from '@/images/avatars/dianne-guilianelli.jpg'
@@ -24,9 +24,9 @@ import richardAstley from '@/images/avatars/richard-astley.jpg'
 import rinaldoBeynonImage from '@/images/avatars/rinaldo-beynon.jpg'
 import ronniCantadoreImage from '@/images/avatars/ronni-cantadore.jpg'
 import stevenMchailImage from '@/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
+import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg' */
 
-const days = [
+/* const days = [
   {
     name: 'Opening Day',
     date: 'April 4',
@@ -138,7 +138,7 @@ const days = [
       },
     ],
   },
-]
+] */
 
 function ImageClipPaths({
   id,
@@ -199,18 +199,83 @@ export function Speakers() {
             Learn from Stanford GSE faculty, industry experts, and experienced
             mentors who will guide you through the hackathon journey.
           </p>
-          <div className="mt-10 rounded-2xl bg-blue-50 p-8">
-            <p className="text-xl font-medium text-blue-900">
-              Speaker announcements coming soon! 🎉
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          <div>
+            <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+              <div className="absolute top-0 right-4 bottom-6 left-0 rounded-4xl border border-red-800 transition duration-300 group-hover:scale-95 xl:right-6" />
+              <div
+                className="absolute inset-0 bg-indigo-50"
+                style={{ clipPath: `url(#${id}-0)` }}
+              >
+                <Image
+                  className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                  src="https://profiles.stanford.edu/proxy/api/cap/profiles/198918/resources/profilephoto/350x350.1700426613117.jpg"
+                  alt="Jodi Anderson"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </div>
+            <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+              <a
+                href="https://profiles.stanford.edu/jodi?releaseVersion=9.6.0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--red)]"
+              >
+                Joseph ("Jodi") Anderson
+              </a>
+            </h3>
+            <p className="mt-1 text-base tracking-tight text-slate-500">
+              Stanford GSE, Co-founder of Rézme
             </p>
-            <p className="mt-2 text-blue-700">
-              We're curating an exceptional lineup of education technology
-              experts, innovators, and mentors. Stay tuned for updates.
+          </div>
+          <div>
+            <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+              <div className="absolute top-0 right-4 bottom-6 left-0 rounded-4xl border border-red-800 transition duration-300 group-hover:scale-95 xl:right-6" />
+              <div
+                className="absolute inset-0 bg-indigo-50"
+                style={{ clipPath: `url(#${id}-1)` }}
+              >
+                <Image
+                  className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                  src="https://symsys.stanford.edu/sites/symsys/files/styles/hs_medium_square_360x360/public/media/image/85e5ea35-994f-416a-8040-4116af4b429d_0_2.png?h=5273c5c2&itok=nm6yOQFC"
+                  alt="Keith Bowen"
+                  width={400}
+                  height={400}
+                />
+              </div>
+            </div>
+            <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+              <a
+                href="https://profiles.stanford.edu/keith-bowen"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[var(--red)]"
+              >
+                Keith Bowen
+              </a>
+            </h3>
+            <p className="mt-1 text-base tracking-tight text-slate-500">
+              Director, Learning Design Challenge, Stanford Accelerator for
+              Learning
+            </p>
+          </div>
+          <div className="rounded-4xl border border-[var(--red)]/20 bg-[var(--red)]/10 p-8 md:col-span-2 lg:col-span-1">
+            <h3 className="font-display text-xl font-bold tracking-tight text-[var(--darkRed)]">
+              More Speakers Coming Soon! 🎉
+            </h3>
+            <p className="mt-4 text-base tracking-tight text-[var(--red)]">
+              We're excited to announce more education technology experts,
+              innovators, and mentors who will be joining us. Stay tuned for
+              updates!
             </p>
           </div>
         </div>
 
-        {/* Speaker display section temporarily hidden
+        {/* Original TabGroup structure
         <TabGroup
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}

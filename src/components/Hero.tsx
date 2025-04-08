@@ -4,15 +4,15 @@ import { Container } from '@/components/Container'
 
 export function Hero() {
   return (
-    <div className="relative py-10 sm:pb-24 sm:pt-20">
-      <BackgroundImage className="-bottom-14 -top-24" />
+    <div className="relative py-10 sm:pt-20 sm:pb-24">
+      <BackgroundImage className="-top-24 -bottom-14" />
       <Container className="relative">
         <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
             <span className="hidden">EduHack - </span>Reimagining Education
             Through Technology
           </h1>
-          <div className="font-display mt-6 space-y-6 text-2xl tracking-tight text-[var(--gray)]">
+          <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
             <p>
               EduHack is Stanford GSE's first student-led hackathon that bridges
               education and emerging technologies to create lasting impact. We
