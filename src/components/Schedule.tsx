@@ -227,10 +227,10 @@ function ScheduleTabbed() {
 function DaySummary({ day }: { day: Day }) {
   return (
     <>
-      <h3 className="text-2xl font-semibold tracking-tight text-blue-900">
+      <h3 className="text-2xl font-semibold tracking-tight text-[var(--darkRed)]">
         <time dateTime={day.dateTime}>{day.date}</time>
       </h3>
-      <p className="mt-1.5 text-base tracking-tight text-blue-900">
+      <p className="text-base tracking-tight text-[var(--darkRed)]">
         {day.summary}
       </p>
     </>
@@ -293,13 +293,19 @@ function ScheduleStatic() {
 
 export function Schedule() {
   return (
-    <section id="schedule" aria-label="Schedule" className="py-20 sm:py-32">
+    <section
+      id="schedule"
+      aria-label="Schedule"
+      className="relative py-20 sm:py-32"
+    >
+      {/* Background image applied behind the content */}
+      <BackgroundImage className="absolute inset-0" />
       <Container className="relative z-10">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter text-blue-600 sm:text-5xl">
+          <h2 className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl">
             A transformative journey from in-person innovation to global impact.
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
             Join us for an intensive weekend at Stanford GSE, followed by a
             two-week global open call to reimagine the future of education
             through technology.
@@ -307,7 +313,6 @@ export function Schedule() {
         </div>
       </Container>
       <div className="relative mt-14 sm:mt-24">
-        <BackgroundImage position="right" className="-top-40 -bottom-32" />
         <Container className="relative">
           <ScheduleTabbed />
           <ScheduleStatic />

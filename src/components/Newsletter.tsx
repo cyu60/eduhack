@@ -1,10 +1,10 @@
-import Image from 'next/image'
+"use client"
 
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-newsletter.jpg'
+import { Button } from "@/components/Button"
+import { Container } from "@/components/Container"
+import { BackgroundImage } from "@/components/BackgroundImage"
 
-function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
+function ArrowRightIcon(props: React.ComponentPropsWithoutRef<"svg">) {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
       <path
@@ -23,31 +23,23 @@ export function Newsletter() {
   return (
     <section id="newsletter" aria-label="Newsletter">
       <Container>
-        <div className="relative -mx-4 overflow-hidden bg-indigo-50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">
-          <Image
-            className="absolute top-0 left-1/2 translate-x-[-10%] translate-y-[-45%] lg:translate-x-[-32%]"
-            src={backgroundImage}
-            alt=""
-            width={919}
-            height={1351}
-            unoptimized
-          />
+        <div className="relative -mx-4 overflow-hidden bg-gray-100/50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">
+          <BackgroundImage className="absolute inset-0" position="left" />
           <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
             <div>
-              <p className="font-display text-4xl font-medium tracking-tighter text-blue-900 sm:text-5xl">
+              <p className="font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
                 Join the Innovation
               </p>
-              <p className="mt-4 text-lg tracking-tight text-blue-900">
-                Stay updated on EduHack events, sponsorship opportunities, and
-                be the first to know when registration opens for both in-person
-                and online phases.
+              <p className="mt-4 text-lg tracking-tight text-[var(--darkRed)]">
+                Stay updated on EduHack events, sponsorship opportunities, and be the
+                first to know when registration opens for both in-person and online phases.
               </p>
             </div>
             <form>
-              <h3 className="text-lg font-semibold tracking-tight text-blue-900">
+              <h3 className="text-lg font-semibold tracking-tight text-[var(--darkRed)]">
                 Subscribe to our updates <span aria-hidden="true">&darr;</span>
               </h3>
-              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-blue-900">
+              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-[var(--darkRed)]">
                 <input
                   type="email"
                   required
@@ -62,9 +54,8 @@ export function Newsletter() {
                   </span>
                 </Button>
               </div>
-              <p className="mt-3 text-sm text-blue-900/60">
-                Get notified about registration deadlines, workshops, and
-                sponsorship opportunities.
+              <p className="mt-3 text-sm text-red-900/60">
+                Get notified about registration deadlines, workshops, and sponsorship opportunities.
               </p>
             </form>
           </div>

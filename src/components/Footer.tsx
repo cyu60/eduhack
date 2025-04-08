@@ -1,27 +1,26 @@
 import { Container } from '@/components/Container'
-import { Logo } from '@/components/Logo'
+import  headerLogo  from "@/public/headerLogoRed.png"
+import Image from 'next/image'
 
 export function Footer() {
   return (
     <footer className="py-16">
       <Container className="flex flex-col items-center justify-between md:flex-row">
-        <Logo className="h-12 w-auto text-slate-900" />
-        <div className="mt-6 flex flex-col items-center gap-4 md:mt-0 md:flex-row">
+        <Image src={headerLogo} alt="EduHack" width={120} height={32} />
+        <div className="mt-6 flex flex-col items-center gap-4 md:mt-0 md:flex-row text-[var(--darkRed)] hover:text-[var(--red)] text-base font-medium">
           <a
             href="mailto:eduhack@stanford.edu"
-            className="text-base font-medium text-blue-600 hover:text-blue-800"
           >
             Contact Us
           </a>
-          <span className="hidden text-blue-600/50 md:inline">|</span>
+          <span className="hidden md:inline">|</span>
           <a
             href="/#"
-            className="text-base font-medium text-blue-600 hover:text-blue-800"
           >
             Become a Sponsor
           </a>
-          <span className="hidden text-blue-600/50 md:inline">|</span>
-          <p className="text-base font-medium text-blue-600">© 2025 EduHack</p>
+          <span className="hidden md:inline">|</span>
+          <p>© 2025 EduHack</p>
         </div>
       </Container>
     </footer>
