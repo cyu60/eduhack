@@ -14,11 +14,11 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
             <p>
-              EduHack is Stanford GSE's first student-led hackathon that bridges
-              education and emerging technologies to create lasting impact. We
-              explore how generative AI and cutting-edge technologies can
-              transform the future of learning and revolutionize the education
-              space.
+              EduHack is first student-led hackathon at Stanford GSE that
+              bridges education and emerging technologies to create lasting
+              impact. We explore how generative AI and cutting-edge technologies
+              can transform the future of learning and revolutionize the
+              education space.
             </p>
             <p>
               Join us for an intensive two-day in-person event at Stanford,
