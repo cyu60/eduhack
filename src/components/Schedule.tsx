@@ -124,7 +124,7 @@ const schedule: Array<Day> = [
     date: 'Online Phase',
     dateTime: '2024-06-09',
     summary:
-      'Two-month open call for global participants to submit their proposals.',
+      'Two-week open call for global participants to submit their proposals.',
     timeSlots: [
       {
         name: 'Submission Period Opens',
@@ -301,7 +301,7 @@ export function Schedule() {
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-blue-900">
             Join us for an intensive weekend at Stanford GSE, followed by a
-            two-month global open call to reimagine the future of education
+            two-week global open call to reimagine the future of education
             through technology.
           </p>
         </div>

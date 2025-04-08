@@ -199,7 +199,18 @@ export function Speakers() {
             Learn from Stanford GSE faculty, industry experts, and experienced
             mentors who will guide you through the hackathon journey.
           </p>
+          <div className="mt-10 rounded-2xl bg-blue-50 p-8">
+            <p className="text-xl font-medium text-blue-900">
+              Speaker announcements coming soon! 🎉
+            </p>
+            <p className="mt-2 text-blue-700">
+              We're curating an exceptional lineup of education technology
+              experts, innovators, and mentors. Stay tuned for updates.
+            </p>
+          </div>
         </div>
+
+        {/* Speaker display section temporarily hidden
         <TabGroup
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
@@ -291,6 +302,7 @@ export function Speakers() {
             ))}
           </TabPanels>
         </TabGroup>
+        */}
       </Container>
     </section>
   )

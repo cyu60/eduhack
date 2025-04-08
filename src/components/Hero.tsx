@@ -14,15 +14,16 @@ export function Hero() {
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-blue-900">
             <p>
-              EduHack is Stanford GSE's first hackathon that bridges education
-              and technology to create mutual impact. We invite organizations to
-              showcase their toolkits and products, while students reimagine
-              their applications in education.
+              EduHack is Stanford GSE's first student-led hackathon that bridges
+              education and emerging technologies to create lasting impact. We
+              explore how generative AI and cutting-edge technologies can
+              transform the future of learning and revolutionize the education
+              space.
             </p>
             <p>
               Join us for an intensive two-day in-person event at Stanford,
-              followed by a two-month global open call to transform the future
-              of learning.
+              followed by a two-week global open call to transform the future of
+              learning.
             </p>
           </div>
           <Button href="#" className="mt-10 w-full sm:hidden">
@@ -31,7 +32,7 @@ export function Hero() {
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Hackers', '1K+'],
-              ['Event Duration', '2 Days + 2 Months'],
+              ['Event Duration', '2 Days + 2 Weeks'],
               ['Venue', 'CERAS'],
               ['Location', 'Stanford GSE'],
             ].map(([name, value]) => (
