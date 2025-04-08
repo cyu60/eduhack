@@ -10,7 +10,7 @@ export function Footer() {
         <div className="mt-6 flex flex-col items-center gap-4 text-base font-medium text-[var(--darkRed)] hover:text-[var(--red)] md:mt-0 md:flex-row">
           <a href="mailto:chinat@stanford.edu">Contact Us</a>
           <span className="hidden md:inline">|</span>
-          <a href="/#">Become a Sponsor</a>
+          <a href="mailto:chinat@stanford.edu">Become a Sponsor</a>
           <span className="hidden md:inline">|</span>
           <p>© 2025 EduHack</p>
         </div>
