@@ -202,67 +202,7 @@ export function Speakers() {
         </div>
 
         <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <div>
-            <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-              <div className="absolute top-0 right-4 bottom-6 left-0 rounded-4xl border border-red-800 transition duration-300 group-hover:scale-95 xl:right-6" />
-              <div
-                className="absolute inset-0 bg-indigo-50"
-                style={{ clipPath: `url(#${id}-0)` }}
-              >
-                <Image
-                  className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                  src="https://profiles.stanford.edu/proxy/api/cap/profiles/198918/resources/profilephoto/350x350.1700426613117.jpg"
-                  alt="Jodi Anderson"
-                  width={400}
-                  height={400}
-                />
-              </div>
-            </div>
-            <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-              <a
-                href="https://profiles.stanford.edu/jodi?releaseVersion=9.6.0"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--red)]"
-              >
-                Joseph ("Jodi") Anderson
-              </a>
-            </h3>
-            <p className="mt-1 text-base tracking-tight text-slate-500">
-              Stanford GSE, Co-founder of Rézme
-            </p>
-          </div>
-          <div>
-            <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-              <div className="absolute top-0 right-4 bottom-6 left-0 rounded-4xl border border-red-800 transition duration-300 group-hover:scale-95 xl:right-6" />
-              <div
-                className="absolute inset-0 bg-indigo-50"
-                style={{ clipPath: `url(#${id}-1)` }}
-              >
-                <Image
-                  className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                  src="https://symsys.stanford.edu/sites/symsys/files/styles/hs_medium_square_360x360/public/media/image/85e5ea35-994f-416a-8040-4116af4b429d_0_2.png?h=5273c5c2&itok=nm6yOQFC"
-                  alt="Keith Bowen"
-                  width={400}
-                  height={400}
-                />
-              </div>
-            </div>
-            <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-              <a
-                href="https://profiles.stanford.edu/keith-bowen"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[var(--red)]"
-              >
-                Keith Bowen
-              </a>
-            </h3>
-            <p className="mt-1 text-base tracking-tight text-slate-500">
-              Director, Learning Design Challenge, Stanford Accelerator for
-              Learning
-            </p>
-          </div>
+          
           <div className="rounded-4xl border border-[var(--red)]/20 bg-[var(--red)]/10 p-8 md:col-span-2 lg:col-span-1">
             <h3 className="font-display text-xl font-bold tracking-tight text-[var(--darkRed)]">
               More Speakers Coming Soon! 🎉
