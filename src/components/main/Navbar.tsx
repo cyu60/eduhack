@@ -1,36 +1,35 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
+import '@/app/global.css'
 
-const Navbar: React.FC = () => {
+export const Navbar = () => {
     return (
-        <nav style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '1rem',
-            backgroundColor: '#333'
-        }}>
-            <div style={{ color: '#fff', fontWeight: 'bold', fontSize: '1.2rem' }}>
-                Eduhack
+        <nav className="flex items-center justify-between px-8 py-2 bg-[var(--darkRed)]">
+            <div className="flex items-center">
+                <p className="text-white text-2xl font-bold mr-2">Edu<span className="italic">Hack</span></p>
             </div>
-            <ul style={{
-                display: 'flex',
-                listStyle: 'none',
-                margin: 0,
-                padding: 0
-            }}>
-                <li style={{ margin: '0 10px' }}>
-                    <Link href="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</Link>
-                </li>
-                <li style={{ margin: '0 10px' }}>
-                    <Link href="/about" style={{ color: '#fff', textDecoration: 'none' }}>About</Link>
-                </li>
-                <li className="mx-2">
-                    <Link href="/contact" className="text-white no-underline">Contact</Link>
-                </li>
-            </ul>
-        </nav>
-    );
-};
 
-export default Navbar;
+            <ul className="hidden lg:flex space-x-8">
+                {['About', 'Mission & Vision', 'Past Events'].map((label) => (
+                <li key={label}>
+                    <Link
+                    href={`/${label.toLowerCase()}`}
+                    className="text-white hover:text-gray-300 transition-colors"
+                    >
+                    {label}
+                    </Link>
+                </li>
+                ))}
+            </ul>
+
+            <div className="flex items-center space-x-4">
+                <Link
+                    href="/login"
+                    className="px-6 py-2 text-white border border-white rounded-full hover:bg-white hover:text-gray-900 transition-colors"
+                >
+                    Login
+                </Link>
+            </div>
+        </nav>
+    )
+}
