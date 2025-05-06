@@ -1,7 +1,7 @@
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { Button } from '@/components/Button'
-import { Container } from '@/components/Container'
-import { Layout } from '@/components/Layout'
+import { BackgroundImage } from '@/components/sum25/BackgroundImage'
+import { Button } from '@/components/ui/button'
+import { Container } from '@/components/sum25/Container'
+import { Layout } from '@/components/sum25/Layout'
 
 export default function NotFound() {
   return (
@@ -18,9 +18,7 @@ export default function NotFound() {
           <p className="mt-4 text-lg tracking-tight text-blue-900">
             Sorry, we couldn’t find the page you’re looking for.
           </p>
-          <Button href="/" className="mt-8">
-            Go back home
-          </Button>
+          <Button className="mt-8">Go back home</Button>
         </Container>
       </div>
     </Layout>

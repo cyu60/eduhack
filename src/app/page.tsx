@@ -1,25 +1,28 @@
+'use client'
+
 import Link from 'next/link'
-import { Button } from '@/components/Button'
+import { Header } from '@/components/sum25/Header'
+import { Button } from '@/components/ui/button'
 
 export default function Page() {
     return (
         <>
+        <Header />
         {/* Full-screen intro */}
         <div className="flex h-screen w-full items-center justify-center bg-white">
-            <div className="text-center px-4">
+            <div className="px-4 text-center">
             <h1 className="text-5xl font-bold">EduHack</h1>
-            <p className="mt-4 max-w-2xl mx-auto text-lg text-gray-600">
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
                 Stanford GSE's first hackathon bridging education and technology to
-                create mutual impact. Students reimagine tools in the world of learning,
-                organizations showcase their latest toolkits.
+                create mutual impact. Students reimagine tools in the world of
+                learning, organizations showcase their latest toolkits.
             </p>
             {/* scroll-to link */}
-            <Button href="#event" className="mt-8">
-                Upcoming Event
-            </Button>
+            <Link href="/sum25">
+                <Button className="mt-8">Upcoming Event</Button>
+            </Link>
             </div>
         </div>
-
         </>
     )
 }

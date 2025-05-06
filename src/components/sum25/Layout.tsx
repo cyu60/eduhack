@@ -1,5 +1,5 @@
-import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { Footer } from '@/components/sum25/Footer'
+import { Header } from '@/components/sum25/Header'
 
 export function Layout({
   children,
