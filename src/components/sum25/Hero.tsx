@@ -1,11 +1,22 @@
-import { BackgroundImage } from '@/components/sum25/BackgroundImage'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/sum25/Container'
 
 export function Hero() {
   return (
     <div className="relative py-10 sm:pt-20 sm:pb-24">
-      <BackgroundImage className="-top-24 -bottom-14" />
+      <div
+        className="absolute inset-0 -top-24 -bottom-14 overflow-hidden opacity-100 transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
+          }}
+        />
+      </div>
       <Container className="relative">
         <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">

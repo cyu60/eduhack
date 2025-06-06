@@ -1,10 +1,9 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { BackgroundImage } from '@/components/sum25/BackgroundImage'
 import { Container } from '@/components/sum25/Container'
 
 interface Day {
@@ -282,29 +281,40 @@ export function Schedule() {
   return (
     <section
       id="schedule"
-      aria-label="Schedule"
-      className="relative py-20 sm:py-32"
+      aria-labelledby="schedule-title"
+      className="py-20 sm:py-32"
     >
-      {/* Background image applied behind the content */}
-      <BackgroundImage className="absolute inset-0" />
-      <Container className="relative z-10">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl">
-            A transformative journey from in-person innovation to global impact.
+      <div
+        className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
+          }}
+        />
+      </div>
+      <Container className="relative">
+        <div className="mx-auto max-w-4xl lg:mx-0">
+          <h2
+            id="schedule-title"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+          >
+            Event Schedule
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Join us for an intensive weekend at Stanford GSE, followed by a
-            two-week global open call to reimagine the future of education
-            through technology.
+            Join us for three exciting phases of the AI4Good event, from launch
+            to implementation.
           </p>
         </div>
-      </Container>
-      <div className="relative mt-14 sm:mt-24">
-        <Container className="relative">
+        <div className="mt-14 lg:mt-16">
           <ScheduleTabbed />
           <ScheduleStatic />
-        </Container>
-      </div>
+        </div>
+      </Container>
     </section>
   )
 }

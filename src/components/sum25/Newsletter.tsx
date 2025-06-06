@@ -1,102 +1,109 @@
 'use client'
-import { useState, FormEvent } from 'react'
-import { Button } from '@/components/sum25/Button'
-import { Container } from '@/components/sum25/Container'
-import { BackgroundImage } from '@/components/sum25/BackgroundImage'
 
-function ArrowRightIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" {...props}>
-      <path
-        d="m14 7 5 5-5 5M19 12H5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  )
-}
+import { useState } from 'react'
+import { Container } from '@/components/sum25/Container'
 
 export function Newsletter() {
   const [email, setEmail] = useState('')
-  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
-
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault()
-
-    try {
-      const formUrl = `https://docs.google.com/forms/d/e/1FAIpQLSewL_rCL6TTcngKOodGKmkAcc2J2rW7KeIYQlQ87gVWHHoIGg/formResponse?usp=pp_url&entry.370492761=${encodeURIComponent(email)}`
-
-      // Using fetch to submit the form
-      await fetch(formUrl, {
-        method: 'GET',
-        mode: 'no-cors', // Google Forms requires no-cors mode
-      })
-
-      setStatus('success')
-      setEmail('')
-    } catch (error) {
-      setStatus('error')
-      console.error('Error submitting form:', error)
-    }
-  }
 
   return (
-    <section id="newsletter" aria-label="Newsletter">
-      <Container>
-        <div className="relative -mx-4 overflow-hidden bg-gray-100/50 px-4 py-20 sm:-mx-6 sm:px-6 md:mx-0 md:rounded-5xl md:px-16 xl:px-24 xl:py-36">
-          <BackgroundImage className="absolute inset-0" position="left" />
-          <div className="relative mx-auto grid max-w-2xl grid-cols-1 gap-x-32 gap-y-14 xl:max-w-none xl:grid-cols-2">
+    <section
+      id="newsletter"
+      aria-labelledby="newsletter-title"
+      className="py-20 sm:py-32"
+    >
+      <div
+        className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to left, transparent, var(--cream, --bgRed))`,
+          }}
+        />
+      </div>
+      <Container className="relative">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
+          <h2
+            id="newsletter-title"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+          >
+            Stay Updated
+          </h2>
+          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
+            Subscribe to our newsletter for the latest updates on the AI4Good
+            event, including registration deadlines, workshop schedules, and
+            success stories.
+          </p>
+        </div>
+        <form className="mx-auto mt-10 max-w-2xl lg:mx-0">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
             <div>
-              <p className="font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
-                Join the Innovation
-              </p>
-              <p className="mt-4 text-lg tracking-tight text-[var(--darkRed)]">
-                Stay updated on EduHack events, sponsorship opportunities, and
-                be the first to know when registration opens for both in-person
-                and online phases.
-              </p>
+              <label
+                htmlFor="first-name"
+                className="block text-sm leading-6 font-semibold text-[var(--darkRed)]"
+              >
+                First name
+              </label>
+              <div className="mt-2.5">
+                <input
+                  type="text"
+                  name="first-name"
+                  id="first-name"
+                  autoComplete="given-name"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-[var(--darkRed)] shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-[var(--red)] focus:ring-inset sm:text-sm sm:leading-6"
+                />
+              </div>
             </div>
-            <form onSubmit={handleSubmit}>
-              <h3 className="text-lg font-semibold tracking-tight text-[var(--darkRed)]">
-                Subscribe to our updates <span aria-hidden="true">&darr;</span>
-              </h3>
-              <div className="mt-5 flex rounded-3xl bg-white py-2.5 pr-2.5 shadow-xl shadow-blue-900/5 focus-within:ring-2 focus-within:ring-[var(--darkRed)]">
+            <div>
+              <label
+                htmlFor="last-name"
+                className="block text-sm leading-6 font-semibold text-[var(--darkRed)]"
+              >
+                Last name
+              </label>
+              <div className="mt-2.5">
+                <input
+                  type="text"
+                  name="last-name"
+                  id="last-name"
+                  autoComplete="family-name"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-[var(--darkRed)] shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-[var(--red)] focus:ring-inset sm:text-sm sm:leading-6"
+                />
+              </div>
+            </div>
+            <div className="sm:col-span-2">
+              <label
+                htmlFor="email"
+                className="block text-sm leading-6 font-semibold text-[var(--darkRed)]"
+              >
+                Email
+              </label>
+              <div className="mt-2.5">
                 <input
                   type="email"
-                  required
-                  placeholder="Enter your email"
-                  aria-label="Email address"
+                  name="email"
+                  id="email"
+                  autoComplete="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="-my-2.5 flex-auto bg-transparent pr-2.5 pl-6 text-base text-slate-900 placeholder:text-slate-400 focus:outline-hidden"
+                  className="block w-full rounded-md border-0 px-3.5 py-2 text-[var(--darkRed)] shadow-sm ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-[var(--red)] focus:ring-inset sm:text-sm sm:leading-6"
                 />
-                <Button type="submit">
-                  <span className="sr-only sm:not-sr-only">Subscribe</span>
-                  <span className="sm:hidden">
-                    <ArrowRightIcon className="h-6 w-6" />
-                  </span>
-                </Button>
               </div>
-              {status === 'success' && (
-                <p className="mt-3 text-sm text-green-600">
-                  Thank you for subscribing!
-                </p>
-              )}
-              {status === 'error' && (
-                <p className="mt-3 text-sm text-red-600">
-                  There was an error subscribing. Please try again.
-                </p>
-              )}
-              <p className="mt-3 text-sm text-red-900/60">
-                Get notified about registration deadlines, workshops, and
-                sponsorship opportunities.
-              </p>
-            </form>
+            </div>
           </div>
-        </div>
+          <div className="mt-8 flex justify-end">
+            <button
+              type="submit"
+              className="rounded-md bg-[var(--red)] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-[var(--darkRed)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--red)]"
+            >
+              Subscribe
+            </button>
+          </div>
+        </form>
       </Container>
     </section>
   )

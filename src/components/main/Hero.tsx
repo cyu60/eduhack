@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
-import { BackgroundImage } from '@/components/sum25/BackgroundImage'
 import { Container } from '@/components/sum25/Container'
 import Slider from 'react-infinite-logo-slider'
 
@@ -37,7 +36,19 @@ const stats = [
 export function Hero() {
   return (
     <div className="relative flex-grow py-10 sm:pt-20 sm:pb-24">
-      <BackgroundImage className="-top-24 -bottom-14" />
+      <div
+        className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden opacity-100 transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
+          }}
+        />
+      </div>
 
       <Container className="lg:max-w-8xl relative mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-12">
         {/* LEFT: Hero content */}

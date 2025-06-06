@@ -1,60 +1,88 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { Container } from '@/components/sum25/Container'
-import { BackgroundImage } from '@/components/sum25/BackgroundImage'
-import dynamic from 'next/dynamic'
-import '@leenguyen/react-flip-clock-countdown/dist/index.css'
-
-const FlipClockCountdown = dynamic(
-  () => import('@leenguyen/react-flip-clock-countdown'),
-  { ssr: false },
-)
 
 export function CountdownTimer() {
-  const targetDate = new Date('June 13, 2025 00:00:00').getTime()
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  })
+
+  useEffect(() => {
+    const targetDate = new Date('2024-06-18T09:00:00')
+
+    const interval = setInterval(() => {
+      const now = new Date()
+      const difference = targetDate.getTime() - now.getTime()
+
+      if (difference > 0) {
+        setTimeLeft({
+          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
+          minutes: Math.floor((difference / 1000 / 60) % 60),
+          seconds: Math.floor((difference / 1000) % 60),
+        })
+      }
+    }, 1000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section
       id="countdown"
-      aria-label="Countdown"
-      className="relative py-16 sm:py-32"
+      aria-labelledby="countdown-title"
+      className="py-20 sm:py-32"
     >
-      <BackgroundImage className="absolute inset-0" />
-      <Container className="relative z-10">
-        <div className="mx-auto max-w-xl text-center lg:mx-0 lg:max-w-4xl lg:pr-24 lg:text-left">
-          <h2 className="font-display text-3xl font-medium tracking-tighter text-[var(--red)] sm:text-4xl">
-            The journey begins soon
+      <div
+        className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500"
+        style={{
+          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+        }}
+      >
+        <div
+          className="absolute inset-0"
+          style={{
+            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
+          }}
+        />
+      </div>
+      <Container className="relative">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2
+            id="countdown-title"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+          >
+            Event Starts In
           </h2>
-          <p className="mt-4 font-display text-lg tracking-tight text-[var(--grey)] sm:text-2xl">
-            Join us for an intensive weekend at Stanford GSE to reimagine the
-            future of education through technology.
-          </p>
-        </div>
-
-        <div className="mt-12 sm:mt-12">
-          {/* Center the flip clock */}
-          <div className="flex justify-center">
-            <FlipClockCountdown
-              to={targetDate}
-              labels={['Days', 'Hours', 'Minutes', 'Seconds']}
-              showLabels={true}
-              showSeparators={true}
-              duration={0.7}
-              style={
-                {
-                  '--fcc-digit-block-width': '60px', // Adjusted for mobile
-                  '--fcc-digit-block-height': '90px', // Adjusted for mobile
-                  '--fcc-digit-font-size': '30px', // Adjusted for mobile
-                } as React.CSSProperties
-              }
-              className="scale-60 sm:scale-100" // Scale down for smaller screens
-            />
-          </div>
-
-          <div className="mt-12 text-center">
-            <p className="text-base text-[var(--gray)] sm:text-xl">
-              Schedule will be revealed soon
-            </p>
+          <div className="mt-10 grid grid-cols-4 gap-5">
+            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-[var(--darkRed)]">
+                {timeLeft.days}
+              </div>
+              <div className="text-sm text-[var(--gray)]">Days</div>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-[var(--darkRed)]">
+                {timeLeft.hours}
+              </div>
+              <div className="text-sm text-[var(--gray)]">Hours</div>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-[var(--darkRed)]">
+                {timeLeft.minutes}
+              </div>
+              <div className="text-sm text-[var(--gray)]">Minutes</div>
+            </div>
+            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
+              <div className="text-3xl font-bold text-[var(--darkRed)]">
+                {timeLeft.seconds}
+              </div>
+              <div className="text-sm text-[var(--gray)]">Seconds</div>
+            </div>
           </div>
         </div>
       </Container>
