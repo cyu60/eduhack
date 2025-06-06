@@ -10,9 +10,9 @@ const partners = [
   },
   {
     name: 'Stanford Founders',
-    logo: '/stanfordFounders.png',
-    link: '#',
-    dimensions: { width: 400, height: 200 },
+    logo: '/stanford-founders-logo.png',
+    link: 'https://stanfordfounders.stanford.edu/',
+    dimensions: { width: 200, height: 100 },
   }
 ]
 
