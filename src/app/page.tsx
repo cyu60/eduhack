@@ -1,17 +1,18 @@
-'use client'
+import { Hero } from '@/components/sum25/Hero'
+import { Newsletter } from '@/components/sum25/Newsletter'
+// import { Schedule } from '@/components/Schedule'
+import { UpcomingSchedule } from '@/components/sum25/UpcomingSchedule'
+import { Speakers } from '@/components/sum25/Speakers'
+import { Sponsors } from '@/components/sum25/Sponsors'
 
-import { Navbar } from '@/components/main/Navbar'
-import { Hero } from '@/components/main/Hero'
-import { Content } from '@/components/main/Content'
-import Footer from '@/components/main/Footer'
-
-export default function Page() {
-    return (
-        <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <Hero />
-            <Content />
-            <Footer />
-        </div>
-    )
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <Speakers />
+      <UpcomingSchedule />
+      <Sponsors />
+      {/* <Newsletter /> */}
+    </>
+  )
 }

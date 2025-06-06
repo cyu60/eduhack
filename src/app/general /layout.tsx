@@ -3,7 +3,6 @@ import { DM_Sans, Inter } from 'next/font/google'
 import clsx from 'clsx'
 
 import '@/styles/tailwind.css'
-import { Layout } from '@/components/sum25/Layout'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -42,9 +41,7 @@ export default function RootLayout({
       )}
     >
       <body className="flex min-h-full">
-        <div className="flex w-full flex-col">
-          <Layout>{children}</Layout>
-        </div>
+        <div className="flex w-full flex-col">{children}</div>
       </body>
     </html>
   )
