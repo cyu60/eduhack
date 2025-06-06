@@ -8,7 +8,6 @@ export function Hero() {
       <BackgroundImage className="-top-24 -bottom-14" />
       <Container className="relative">
         <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
-        <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
             <span className="hidden">EduHack - </span>Reimagining Education
             Through Technology

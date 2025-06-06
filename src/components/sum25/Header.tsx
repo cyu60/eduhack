@@ -2,12 +2,10 @@ import { Button } from '@/components/sum25/Button'
 import { Container } from '@/components/sum25/Container'
 import Image from 'next/image'
 import headerLogo from '@/public/headerLogoWhite.png'
-import headerLogo from '@/public/headerLogoWhite.png'
 import '@/app/global.css'
 
 export function Header() {
   return (
-    <header className="relative z-50 flex-none bg-[var(--darkRed)] py-4">
     <header className="relative z-50 flex-none bg-[var(--darkRed)] py-4">
       <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
         <div className="flex items-center lg:mt-0 lg:grow lg:basis-0">
