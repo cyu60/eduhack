@@ -7,24 +7,6 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/sum25/Container'
 import { DiamondIcon } from '@/components/sum25/DiamondIcon'
-import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
-import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
-import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
-import dianneGuilianelliImage from '@/images/avatars/dianne-guilianelli.jpg'
-import erhartCockrinImage from '@/images/avatars/erhart-cockrin.jpg'
-import giordanoSagucioImage from '@/images/avatars/giordano-sagucio.jpg'
-import gordonSandersonImage from '@/images/avatars/gordon-sanderson.jpg'
-import heatherTerryImage from '@/images/avatars/heather-terry.jpg'
-import ibrahimFraschImage from '@/images/avatars/ibrahim-frasch.jpg'
-import jaquelinIschImage from '@/images/avatars/jaquelin-isch.jpg'
-import kimberlyParsonsImage from '@/images/avatars/kimberly-parsons.jpg'
-import parkerJohnsonImage from '@/images/avatars/parker-johnson.jpg'
-import piersWilkinsImage from '@/images/avatars/piers-wilkins.jpg'
-import richardAstley from '@/images/avatars/richard-astley.jpg'
-import rinaldoBeynonImage from '@/images/avatars/rinaldo-beynon.jpg'
-import ronniCantadoreImage from '@/images/avatars/ronni-cantadore.jpg'
-import stevenMchailImage from '@/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
 
 const days = [
   {
@@ -33,111 +15,27 @@ const days = [
     dateTime: '2024-06-18',
     speakers: [
       {
-        name: 'NGO Representative 1',
-        role: 'Executive Director at Social Impact NGO',
-        image: stevenMchailImage,
+        name: 'Lu Meng',
+        role: 'Communication and Programme Coordinator, Division for Prosperity, UNITAR',
+        image: '/images/speakers/lu-meng.jpg',
       },
       {
-        name: 'NGO Representative 2',
-        role: 'Program Manager at Education NGO',
-        image: jaquelinIschImage,
+        name: 'Khaulat Ayomide',
+        role: 'Product Designer & Community Builder',
+        image: '/images/speakers/khaulat.jpg', 
       },
       {
-        name: 'NGO Representative 3',
-        role: 'Director at Healthcare NGO',
-        image: dianneGuilianelliImage,
+        name: 'Jodie Lim',
+        role: 'Product Designer & UX Researcher',
+        image: '/images/speakers/jodi.jpg',
       },
       {
-        name: 'NGO Representative 4',
-        role: 'Head of Technology at Environmental NGO',
-        image: ronniCantadoreImage,
-      },
-      {
-        name: 'NGO Representative 5',
-        role: 'Innovation Lead at Community NGO',
-        image: erhartCockrinImage,
-      },
-      {
-        name: 'NGO Representative 6',
-        role: 'Digital Director at Youth NGO',
-        image: parkerJohnsonImage,
-      },
+        name: 'Jann Renteria',
+        role: 'Software Engineer @ Stripe, Ex-Meta',
+        image: '/images/speakers/jann.jpg',
+      }
     ],
-  },
-  {
-    name: 'Technical Experts',
-    date: 'Phase II',
-    dateTime: '2024-06-19',
-    speakers: [
-      {
-        name: 'AI Expert 1',
-        role: 'AI Research Lead at Stanford',
-        image: damarisKimuraImage,
-      },
-      {
-        name: 'AI Expert 2',
-        role: 'Machine Learning Engineer',
-        image: ibrahimFraschImage,
-      },
-      {
-        name: 'AI Expert 3',
-        role: 'Data Science Director',
-        image: cathleneBurrageImage,
-      },
-      {
-        name: 'AI Expert 4',
-        role: 'AI Ethics Specialist',
-        image: rinaldoBeynonImage,
-      },
-      {
-        name: 'AI Expert 5',
-        role: 'NLP Research Scientist',
-        image: waylonHydenImage,
-      },
-      {
-        name: 'AI Expert 6',
-        role: 'Computer Vision Engineer',
-        image: giordanoSagucioImage,
-      },
-    ],
-  },
-  {
-    name: 'Mentors & Advisors',
-    date: 'Phase III',
-    dateTime: '2024-07-08',
-    speakers: [
-      {
-        name: 'Mentor 1',
-        role: 'Senior Software Engineer',
-        image: andrewGreeneImage,
-      },
-      {
-        name: 'Mentor 2',
-        role: 'UX/UI Designer',
-        image: heatherTerryImage,
-      },
-      {
-        name: 'Mentor 3',
-        role: 'Product Manager',
-        image: piersWilkinsImage,
-      },
-      {
-        name: 'Mentor 4',
-        role: 'Full Stack Developer',
-        image: gordonSandersonImage,
-      },
-      {
-        name: 'Mentor 5',
-        role: 'AI Solutions Architect',
-        image: kimberlyParsonsImage,
-      },
-      {
-        name: 'Mentor 6',
-        role: 'Social Impact Director',
-        image: richardAstley,
-      },
-    ],
-  },
+  }
 ]
 
 function ImageClipPaths({
@@ -278,6 +176,8 @@ export function Speakers() {
                           alt=""
                           priority
                           sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                          width={1000}
+                          height={1000}
                         />
                       </div>
                     </div>
@@ -289,6 +189,14 @@ export function Speakers() {
                     </p>
                   </div>
                 ))}
+                <div>
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+                    More Coming Soon!
+                  </h3>
+                  <p className="mt-1 text-base tracking-tight text-slate-500">
+                    Stay tuned as we announce more amazing partners and mentors
+                  </p>
+                </div>
               </TabPanel>
             ))}
           </TabPanels>
