@@ -18,7 +18,7 @@ const partners = [
 
 export function Sponsors() {
   return (
-    <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
+    <section id="sponsors" aria-label="Sponsors" className="py-10">
       <Container>
         {/* Partners Section */}
         <div>

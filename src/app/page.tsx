@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <Hero />
       <Speakers />
-      <UpcomingSchedule />
+      {/* <UpcomingSchedule /> */}
       <Sponsors />
       {/* <Newsletter /> */}
     </>
