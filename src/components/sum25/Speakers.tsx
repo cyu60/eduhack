@@ -24,9 +24,9 @@ import richardAstley from '@/images/avatars/richard-astley.jpg'
 import rinaldoBeynonImage from '@/images/avatars/rinaldo-beynon.jpg'
 import ronniCantadoreImage from '@/images/avatars/ronni-cantadore.jpg'
 import stevenMchailImage from '@/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
+import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg' */
 
-const days = [
+/* const days = [
   {
     name: 'Opening Day',
     date: 'April 4',
@@ -138,7 +138,7 @@ const days = [
       },
     ],
   },
-]
+] */
 
 function ImageClipPaths({
   id,
@@ -200,6 +200,22 @@ export function Speakers() {
             mentors who will guide you through the hackathon journey.
           </p>
         </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+          
+          <div className="rounded-4xl border border-[var(--red)]/20 bg-[var(--red)]/10 p-8 md:col-span-2 lg:col-span-1">
+            <h3 className="font-display text-xl font-bold tracking-tight text-[var(--darkRed)]">
+              More Speakers Coming Soon! 🎉
+            </h3>
+            <p className="mt-4 text-base tracking-tight text-[var(--red)]">
+              We're excited to announce more education technology experts,
+              innovators, and mentors who will be joining us. Stay tuned for
+              updates!
+            </p>
+          </div>
+        </div>
+
+        {/* Original TabGroup structure
         <TabGroup
           className="mt-14 grid grid-cols-1 items-start gap-x-8 gap-y-8 sm:mt-16 sm:gap-y-16 lg:mt-24 lg:grid-cols-4"
           vertical={tabOrientation === 'vertical'}
@@ -291,6 +307,7 @@ export function Speakers() {
             ))}
           </TabPanels>
         </TabGroup>
+        */}
       </Container>
     </section>
   )

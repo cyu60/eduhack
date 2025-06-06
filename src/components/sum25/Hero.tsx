@@ -8,28 +8,30 @@ export function Hero() {
       <BackgroundImage className="-top-24 -bottom-14" />
       <Container className="relative">
         <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
+        <div className="lg:max-w-8xl mx-auto max-w-6xl lg:px-12">
           <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
             <span className="hidden">EduHack - </span>Reimagining Education
             Through Technology
           </h1>
           <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
             <p>
-              EduHack is Stanford GSE's first hackathon that bridges education
-              and technology to create mutual impact. We invite organizations to
-              showcase their toolkits and products, while students reimagine
-              their applications in education.
+              EduHack is first student-led hackathon at Stanford GSE that
+              bridges education and emerging technologies to create lasting
+              impact. We explore how generative AI and cutting-edge technologies
+              can transform the future of learning and revolutionize the
+              education space.
             </p>
             <p>
               Join us for an intensive two-day in-person event at Stanford,
-              followed by a two-month global open call to transform the future
-              of learning.
+              followed by a two-week global open call to transform the future of
+              learning.
             </p>
           </div>
           <Button className="mt-10 w-full sm:hidden">Register Now</Button>
           <dl className="mt-10 grid grid-cols-2 gap-x-10 gap-y-6 sm:mt-16 sm:gap-x-16 sm:gap-y-10 sm:text-center lg:auto-cols-auto lg:grid-flow-col lg:grid-cols-none lg:justify-start lg:text-left">
             {[
               ['Hackers', '1K+'],
-              ['Event Duration', '2 Days (In-person) + 2 Months (Online)'],
+              ['Event Duration', '2 Days + 2 Weeks'],
               ['Venue', 'CERAS'],
               ['Location', 'Stanford GSE'],
             ].map(([name, value]) => (
