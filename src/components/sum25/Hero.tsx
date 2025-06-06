@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
 import { Container } from '@/components/sum25/Container'
 import { BackgroundImage } from '@/components/BackgroundImage'
 import { CountdownTimer } from '@/components/sum25/CountdownTimer'
+import Link from 'next/link'
 
 export function Hero() {
   return (
@@ -28,9 +28,17 @@ export function Hero() {
           </p>
         </div>
 
-        <Button className="mt-10 w-full sm:hidden">Register Now</Button>
+        <div className="mt-8 flex justify-center gap-6">
+          <Link
+            href="https://lu.ma/a8x369mf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-[var(--red)] px-6 py-2 text-lg font-semibold text-white hover:bg-[var(--darkRed)] focus:outline-none focus:ring-2 focus:ring-[var(--red)] focus:ring-offset-2"
+          >
+            Register Now
+          </Link>
+        </div>
 
-        {/* Countdown Timer */}
         <CountdownTimer />
 
       </Container>

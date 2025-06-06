@@ -51,11 +51,11 @@ export function CountdownTimer() {
       id="countdown"
       aria-labelledby="countdown-title"
     >
-      <Container className="relative mt-10">
+      <Container className="relative mt-4">
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="countdown-title"
-            className="font-display text-3xl font-semibold tracking-tighter text-[var(--darkRed)] sm:text-5xl"
+            className="font-display text-xl font-semibold tracking-tighter text-[var(--darkRed)] sm:text-5xl"
           >
             Event Starts In
           </h2>
