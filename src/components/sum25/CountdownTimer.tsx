@@ -12,7 +12,7 @@ export function CountdownTimer() {
   })
 
   useEffect(() => {
-    const targetDate = new Date('2024-06-18T09:00:00')
+    const targetDate = new Date('2025-06-18T013:00:00')
 
     const interval = setInterval(() => {
       const now = new Date()
@@ -35,40 +35,39 @@ export function CountdownTimer() {
     <section
       id="countdown"
       aria-labelledby="countdown-title"
-      className="py-20 sm:py-32"
     >
       <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="countdown-title"
-            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+            className="font-display text-4xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-5xl"
           >
             Event Starts In
           </h2>
           <div className="mt-10 grid grid-cols-4 gap-5">
-            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold text-[var(--darkRed)]">
+            <div className="rounded-lg bg-[var(--cream)] p-4">
+              <div className="text-7xl font-bold text-[var(--darkRed)]">
                 {timeLeft.days}
               </div>
-              <div className="text-sm text-[var(--gray)]">Days</div>
+              <div className="text-lg text-[var(--gray)]">Days</div>
             </div>
-            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold text-[var(--darkRed)]">
+            <div className="rounded-lg bg-[var(--cream)] p-4">
+              <div className="text-7xl font-bold text-[var(--darkRed)]">
                 {timeLeft.hours}
               </div>
-              <div className="text-sm text-[var(--gray)]">Hours</div>
+              <div className="text-lg text-[var(--gray)]">Hours</div>
             </div>
-            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold text-[var(--darkRed)]">
+            <div className="rounded-lg bg-[var(--cream)] p-4">
+              <div className="text-7xl font-bold text-[var(--darkRed)]">
                 {timeLeft.minutes}
               </div>
-              <div className="text-sm text-[var(--gray)]">Minutes</div>
+              <div className="text-lg text-[var(--gray)]">Minutes</div>
             </div>
-            <div className="rounded-lg bg-white/10 p-4 backdrop-blur-sm">
-              <div className="text-3xl font-bold text-[var(--darkRed)]">
+            <div className="rounded-lg bg-[var(--cream)] p-4">
+              <div className="text-7xl font-bold text-[var(--darkRed)]">
                 {timeLeft.seconds}
               </div>
-              <div className="text-sm text-[var(--gray)]">Seconds</div>
+              <div className="text-lg text-[var(--gray)]">Seconds</div>
             </div>
           </div>
         </div>
