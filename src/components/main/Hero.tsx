@@ -39,16 +39,9 @@ export function Hero() {
       <div
         className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden opacity-100 transition-opacity duration-500"
         style={{
-          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
+          background: `linear-gradient(to bottom, transparent, var(--bgRed)), linear-gradient(to right, transparent, var(--cream, var(--bgRed)))`,
         }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
-          }}
-        />
-      </div>
+      ></div>
 
       <Container className="lg:max-w-8xl relative mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-12">
         {/* LEFT: Hero content */}
@@ -108,55 +101,6 @@ export function Hero() {
               <p className="mt-2 text-[var(--darkRed)]">{description}</p>
             </div>
           ))}
-        </div>
-      </Container>
-
-      {/* Vision & Mission sections */}
-      <Container className="relative mx-auto mt-20 mb-10 max-w-4xl px-6">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-[var(--darkRed)]">
-              Our Vision
-            </h2>
-            <p className="text-lg text-[var(--gray)]">
-              To discover and cultivate outstanding talents with both technical
-              capabilities and social responsibility, while establishing
-              long-term cooperation between the technology community and public
-              welfare organizations.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-[var(--darkRed)]">
-              Our Mission
-            </h2>
-            <p className="text-lg text-[var(--gray)]">
-              To explore how AI can better serve non-profit organizations by
-              connecting technological innovation with social welfare and
-              promoting the application of AI technology in solving social
-              problems.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-[var(--darkRed)]">
-              Our Values
-            </h2>
-            <p className="text-lg text-[var(--gray)]">
-              Integration of technology and public welfare, talent development,
-              industry-academia-research collaboration, and innovative solutions
-              for social impact.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold text-[var(--darkRed)]">
-              Our Goals
-            </h2>
-            <p className="text-lg text-[var(--gray)]">
-              Produce excellent web pages and applications showcasing AI in
-              NGOs, promote actual implementation of AI technology in public
-              welfare, and provide valuable experience and development
-              opportunities for participants.
-            </p>
-          </div>
         </div>
       </Container>
     </div>

@@ -1,11 +1,4 @@
-import {
-    Footer,
-    FooterColumn,
-    FooterBottom,
-    FooterContent,
-} from '@/components/ui/footer'
 import { ReactNode } from 'react'
-import { cn } from '@/lib/utils'
 
 interface FooterLink {
     text: string
@@ -23,36 +16,33 @@ interface FooterSectionProps {
     columns?: FooterColumnProps[]
     copyright?: string
     policies?: FooterLink[]
-    showModeToggle?: boolean
     className?: string
 }
 
 export default function FooterSection({
-    logo = <span className="text-2xl font-bold">EduHack</span>,
     name = 'EduHack',
     columns = [
         {
         title: 'Event',
         links: [
-            { text: 'About', href: '/about' },
-            { text: 'Schedule', href: '/schedule' },
-            { text: 'Register', href: '/register' },
+            { text: 'About', href: '#' },
+            { text: 'Schedule', href: '#' },
+            { text: 'Register', href: '#' },
         ],
         },
         {
         title: 'Partners',
         links: [
-            { text: 'Stanford ACL', href: '/partners/acl' },
-            { text: 'NGO Partners', href: '/partners/ngos' },
-            { text: 'Technical Experts', href: '/partners/experts' },
+            { text: 'Stanford ACL', href: '#' },
+            { text: 'NGO Partners', href: '#' },
+            { text: 'Technical Experts', href: '#' },
         ],
         },
         {
         title: 'Resources',
         links: [
-            { text: 'FAQ', href: '/faq' },
-            { text: 'Contact', href: '/contact' },
-            { text: 'GitHub', href: 'https://github.com/eduhack' },
+            { text: 'FAQ', href: '#' },
+            { text: 'Contact', href: '#' },
         ],
         },
     ],
@@ -61,50 +51,61 @@ export default function FooterSection({
         { text: 'Privacy Policy', href: '#' },
         { text: 'Terms of Service', href: '#' },
     ],
-    showModeToggle = true,
-    className,
+    className = '',
     }: FooterSectionProps) {
     return (
-        <footer className={cn('w-full px-8', className)}>
-        <div className="max-w-container mx-auto pt-10">
-            <Footer>
-            <FooterContent>
-                <FooterColumn className="col-span-2 sm:col-span-3 md:col-span-1">
-                    <div className="flex items-center gap-2">
-                        {/* {logo} */}
-                        <h3 className="text-xl font-bold">{name}</h3>
-                    </div>
-                </FooterColumn>
-                {columns.map((column, index) => (
-                <FooterColumn key={index}>
-                    <h3 className="text-md pt-1 font-semibold">{column.title}</h3>
-                    {column.links.map((link, linkIndex) => (
-                    <a
-                        key={linkIndex}
-                        href={link.href}
-                        className="text-sm text-muted-foreground hover:underline"
-                    >
-                        {link.text}
-                    </a>
+        <footer className="w-full bg-[var(--darkRed)] text-white">
+        <div className="mx-auto max-w-8xl px-4 py-12 sm:px-6 lg:px-8">
+            <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
+            <div className="md:w-1/4">
+                <h3 className="text-2xl font-bold ">
+                {name}
+                </h3>
+                <p className="mt-2 text-sm">
+                A hackathon for educational innovation.
+                </p>
+            </div>
+
+            <div className="flex w-full flex-col md:w-3/4 md:flex-row md:justify-end md:space-x-16">
+                {columns.map((column) => (
+                <div key={column.title} className="mt-8 min-w-[140px] md:mt-0">
+                    <h4 className="text-md font-semibold tracking-wider uppercase">
+                    {column.title}
+                    </h4>
+                    <ul className="mt-4 space-y-2">
+                    {column.links.map((link) => (
+                        <li key={link.text}>
+                        <a
+                            href={link.href}
+                            className="text-sm hover:underline"
+                        >
+                            {link.text}
+                        </a>
+                        </li>
                     ))}
-                </FooterColumn>
-                ))}
-            </FooterContent>
-            <FooterBottom>
-                <div>{copyright}</div>
-                <div className="flex items-center gap-4">
-                {policies.map((policy, index) => (
-                    <a
-                    key={index}
-                    href={policy.href}
-                    className="text-sm hover:underline"
-                    >
-                    {policy.text}
-                    </a>
-                ))}
+                    </ul>
                 </div>
-            </FooterBottom>
-            </Footer>
+                ))}
+            </div>
+            </div>
+
+            {/* Bottom bar with copyright and policies */}
+            <div className="mt-12 flex flex-col items-center justify-between border-t border-gray-200 pt-8 sm:flex-row dark:border-gray-800">
+            <p className="text-sm">
+                {copyright}
+            </p>
+            <div className="mt-4 flex items-center gap-x-6 sm:mt-0">
+                {policies.map((policy) => (
+                <a
+                    key={policy.text}
+                    href={policy.href}
+                    className="text-sm"
+                >
+                    {policy.text}
+                </a>
+                ))}
+            </div>
+            </div>
         </div>
         </footer>
     )
