@@ -6,19 +6,6 @@ export default function NotFound() {
   return (
     <Layout showFooter={false}>
       <div className="relative flex h-full items-center py-20 sm:py-36">
-        <div 
-          className="absolute inset-0 -top-36 bottom-0 overflow-hidden"
-          style={{
-            background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
-          }}
-        >
-          <div
-            className="absolute inset-0"
-            style={{
-              background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
-            }}
-          />
-        </div>
         <Container className="relative flex w-full flex-col items-center">
           <p className="font-display text-2xl tracking-tight text-blue-900">
             404

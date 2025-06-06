@@ -284,19 +284,6 @@ export function Schedule() {
       aria-labelledby="schedule-title"
       className="py-20 sm:py-32"
     >
-      <div
-        className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500"
-        style={{
-          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
-        }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
-          }}
-        />
-      </div>
       <Container className="relative">
         <div className="mx-auto max-w-4xl lg:mx-0">
           <h2

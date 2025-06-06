@@ -1,29 +1,10 @@
+'use client'
+
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Container } from '@/components/sum25/Container'
 import Slider from 'react-infinite-logo-slider'
-
-const cards = [
-  {
-    title: 'Phase I: Launch Meeting',
-    description:
-      'June 18 @ Stanford GSE Ceras building - Event introduction, NGO needs sharing, and team building.',
-  },
-  {
-    title: 'Phase II: Design Competition',
-    description: 'Two-week online competition to design AI solutions for NGOs.',
-  },
-  {
-    title: 'Phase III: Internship',
-    description:
-      'Selected participants receive NGO internship opportunities to implement their solutions.',
-  },
-  {
-    title: 'Professional Growth',
-    description:
-      'Gain valuable experience, official certification, and career development opportunities.',
-  },
-]
+import { BackgroundImage } from '@/components/BackgroundImage'
 
 const stats = [
   ['Stanford ACL', 'Partner'],
@@ -36,17 +17,11 @@ const stats = [
 export function Hero() {
   return (
     <div className="relative flex-grow py-10 sm:pt-20 sm:pb-24">
-      <div
-        className="absolute top-0 right-0 bottom-0 left-0 overflow-hidden opacity-100 transition-opacity duration-500"
-        style={{
-          background: `linear-gradient(to bottom, transparent, var(--bgRed)), linear-gradient(to right, transparent, var(--cream, var(--bgRed)))`,
-        }}
-      ></div>
+      <BackgroundImage position="right" />
 
-      <Container className="lg:max-w-8xl relative mx-auto grid max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-12">
-        {/* LEFT: Hero content */}
+      <Container className="lg:max-w-8xl relative mx-auto max-w-6xl grid-cols-1 gap-12 px-6 lg:grid-cols-2 lg:px-12">
         <div className="space-y-6 text-white">
-          <h1 className="font-display text-3xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
+          <h1 className="font-display text-3xl font-bold text-[var(--darkRed)] sm:text-7xl">
             EduHack:
             <br />
             AI4Good Event
@@ -88,19 +63,10 @@ export function Hero() {
           </div>
         </div>
 
-        {/* RIGHT: Event cards */}
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-          {cards.map(({ title, description }) => (
-            <div
-              key={title}
-              className="bg-opacity-10 rounded-lg bg-[var(--cream)] p-6 backdrop-blur-lg"
-            >
-              <h3 className="text-xl font-semibold text-[var(--darkRed)]">
-                {title}
-              </h3>
-              <p className="mt-2 text-[var(--darkRed)]">{description}</p>
-            </div>
-          ))}
+        <div className="mt-12 text-center">
+          <Button className="text-2xl font-bold bg-[var(--darkRed)] p-8 text-white hover:bg-[var(--cream)]">
+            <Link href="/sum25">See Latest Event</Link>
+          </Button>
         </div>
       </Container>
     </div>

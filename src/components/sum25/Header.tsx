@@ -6,22 +6,33 @@ import '@/app/global.css'
 
 export function Header() {
   return (
-    <header className="relative z-50 flex-none bg-[var(--darkRed)] py-4">
-      <Container className="flex flex-wrap items-center justify-center sm:justify-between lg:flex-nowrap">
-        <div className="flex items-center lg:mt-0 lg:grow lg:basis-0">
-          <Image src={headerLogo} alt="EduHack" width={180} height={32} />
+    <header className="relative z-50 flex-none bg-[var(--darkRed)]">
+      <Container className="flex items-center justify-between px-8 py-4">
+        {/* Left: Logo */}
+        <div className="flex items-center">
+          <Image
+            src={headerLogo}
+            alt="EduHack"
+            width={120}
+            height={12}
+            className="mr-2"
+          />
         </div>
-        <div className="order-first -mx-4 flex flex-auto basis-full overflow-x-auto border-b border-blue-600/10 py-4 font-mono text-sm whitespace-nowrap text-blue-600 sm:-mx-6 lg:order-none lg:mx-0 lg:basis-auto lg:border-0 lg:py-0">
-          <div className="mx-auto flex items-center gap-4 px-4 text-white">
+
+        {/* Center: Date and Location */}
+        <div className="hidden md:flex flex-col items-center text-white font-mono text-sm">
+          <div className="flex items-center gap-4">
             <p>
-              <time dateTime="2024-06-07">13</time>-
+              <time dateTime="2024-06-07">13</time>–
               <time dateTime="2024-06-08">14 June, 2025</time>
             </p>
             <span className="hidden md:inline">|</span>
             <p>Stanford GSE, CERAS</p>
           </div>
         </div>
-        <div className="hidden sm:mt-10 sm:flex lg:mt-0 lg:grow lg:basis-0 lg:justify-end">
+
+        {/* Right: Register Button */}
+        <div className="hidden sm:flex">
           <Button variant="cream" href="#" className="bg-[var(--cream)]">
             Register Now
           </Button>

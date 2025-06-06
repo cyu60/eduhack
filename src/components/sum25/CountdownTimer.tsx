@@ -37,19 +37,6 @@ export function CountdownTimer() {
       aria-labelledby="countdown-title"
       className="py-20 sm:py-32"
     >
-      <div
-        className="absolute inset-0 overflow-hidden opacity-100 transition-opacity duration-500"
-        style={{
-          background: `linear-gradient(to bottom, transparent, var(--bgRed))`,
-        }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: `linear-gradient(to right, transparent, var(--cream, --bgRed))`,
-          }}
-        />
-      </div>
       <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <h2
