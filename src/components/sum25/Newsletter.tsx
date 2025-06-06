@@ -1,6 +1,5 @@
 'use client'
-'use client'
-
+import { useState, FormEvent } from 'react'
 import { Button } from '@/components/sum25/Button'
 import { Container } from '@/components/sum25/Container'
 import { BackgroundImage } from '@/components/sum25/BackgroundImage'

@@ -17,6 +17,15 @@ const sponsors = [
   },
 ]
 
+const partners = [
+  {
+    name: 'Collaborative Learning Fund',
+    logo: '/collaborative-learning-fund-logo.png', 
+    link: 'https://edfund.stanford.edu/2024-2025',
+    dimensions: { width: 400, height: 200 },
+  },
+]
+
 export function Sponsors() {
   return (
     <section id="sponsors" aria-label="Sponsors" className="py-20 sm:py-32">
