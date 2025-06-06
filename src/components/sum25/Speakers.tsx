@@ -8,7 +8,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/sum25/Container'
 import { DiamondIcon } from '@/components/sum25/DiamondIcon'
 
-const days = [
+const data = [
   {
     name: 'NGO Partners',
     date: 'Phase I',
@@ -18,24 +18,28 @@ const days = [
         name: 'Lu Meng',
         role: 'Communication and Programme Coordinator, Division for Prosperity, UNITAR',
         image: '/images/speakers/lu-meng.jpg',
+        linkedin: 'https://www.linkedin.com/in/lu-meng-unitar/',
       },
       {
         name: 'Khaulat Ayomide',
         role: 'Product Designer & Community Builder',
-        image: '/images/speakers/khaulat.jpg', 
+        image: '/images/speakers/khaulat.jpg',
+        linkedin: 'https://www.linkedin.com/in/khaulat/',
       },
       {
         name: 'Jodie Lim',
         role: 'Product Designer & UX Researcher',
         image: '/images/speakers/jodi.jpg',
+        linkedin: 'https://www.linkedin.com/in/jodieous/',
       },
       {
         name: 'Jann Renteria',
         role: 'Software Engineer @ Stripe, Ex-Meta',
         image: '/images/speakers/jann.jpg',
-      }
+        linkedin: 'https://www.linkedin.com/in/howdyjann/',
+      },
     ],
-  }
+  },
 ]
 
 function ImageClipPaths({
@@ -109,12 +113,12 @@ export function Speakers() {
             <TabList className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 px-4 whitespace-nowrap sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) => (
                 <>
-                  {days.map((day, dayIndex) => (
-                    <div key={day.dateTime} className="relative lg:pl-8">
+                  {data.map((data, dataIndex) => (
+                    <div key={data.dateTime} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
-                          dayIndex === selectedIndex
+                          dataIndex === selectedIndex
                             ? 'fill-[var(--red)] stroke-[var(--red)]'
                             : 'fill-transparent stroke-slate-400',
                         )}
@@ -123,21 +127,21 @@ export function Speakers() {
                         <div
                           className={clsx(
                             'font-mono text-sm',
-                            dayIndex === selectedIndex
+                            dataIndex === selectedIndex
                               ? 'text-[var(--red)]'
                               : 'text-slate-500',
                           )}
                         >
                           <Tab className="data-selected:not-data-focus:outline-hidden">
                             <span className="absolute inset-0" />
-                            {day.name}
+                            {data.name}
                           </Tab>
                         </div>
                         <time
-                          dateTime={day.dateTime}
+                          dateTime={data.dateTime}
                           className="mt-1.5 block text-2xl font-semibold tracking-tight text-[var(--darkRed)]"
                         >
-                          {day.date}
+                          {data.date}
                         </time>
                       </div>
                     </div>
@@ -147,7 +151,7 @@ export function Speakers() {
             </TabList>
           </div>
           <TabPanels className="lg:col-span-3">
-            {days.map((day) => (
+            {data.map((day) => (
               <TabPanel
                 key={day.dateTime}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 data-selected:not-data-focus:outline-hidden sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
@@ -155,38 +159,40 @@ export function Speakers() {
               >
                 {day.speakers.map((speaker, speakerIndex) => (
                   <div key={speakerIndex}>
-                    <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-                      <div
-                        className={clsx(
-                          'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                          [
-                            'border-red-800',
-                            'border-red-800',
-                            'border-red-800',
-                          ][speakerIndex % 3],
-                        )}
-                      />
-                      <div
-                        className="absolute inset-0 bg-indigo-50"
-                        style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
-                      >
-                        <Image
-                          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
-                          alt=""
-                          priority
-                          sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
-                          width={1000}
-                          height={1000}
+                    <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
+                      <div className="relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+                        <div
+                          className={clsx(
+                            'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                            [
+                              'border-red-800',
+                              'border-red-800',
+                              'border-red-800',
+                            ][speakerIndex % 3],
+                          )}
                         />
+                        <div
+                          className="absolute inset-0 bg-indigo-50"
+                          style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+                        >
+                          <Image
+                            className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                            src={speaker.image}
+                            alt={speaker.name}
+                            priority
+                            sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                            width={400}
+                            height={400}
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                      {speaker.name}
-                    </h3>
-                    <p className="mt-1 text-base tracking-tight text-slate-500">
-                      {speaker.role}
-                    </p>
+                      <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 group-hover:text-[var(--red)]">
+                        {speaker.name}
+                      </h3>
+                      <p className="mt-1 text-base tracking-tight text-slate-500">
+                        {speaker.role}
+                      </p>
+                    </a>
                   </div>
                 ))}
                 <div>
