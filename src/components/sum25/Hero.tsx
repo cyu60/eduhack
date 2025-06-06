@@ -13,12 +13,10 @@ export function Hero() {
       </div>
       <Container className="lg:max-w-8xl mx-auto max-w-6xl px-6 lg:px-12 relative">
         
-        {/* Main Heading */}
         <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
           <span className="hidden">EduHack - </span>AI4Good Event
         </h1>
 
-        {/* Descriptive Text */}
         <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
           <p>
             Join us in exploring how AI can better serve non-profit organizations. Connect technological innovation with social welfare and become part of the next generation of socially responsible technical talents.
