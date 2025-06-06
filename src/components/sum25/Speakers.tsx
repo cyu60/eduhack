@@ -28,112 +28,112 @@ import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
 
 const days = [
   {
-    name: 'Opening Day',
-    date: 'April 4',
-    dateTime: '2022-04-04',
+    name: 'NGO Partners',
+    date: 'Phase I',
+    dateTime: '2024-06-18',
     speakers: [
       {
-        name: 'Steven McHail',
-        role: 'Designer at Globex Corporation',
+        name: 'NGO Representative 1',
+        role: 'Executive Director at Social Impact NGO',
         image: stevenMchailImage,
       },
       {
-        name: 'Jaquelin Isch',
-        role: 'UX Design at InGen',
+        name: 'NGO Representative 2',
+        role: 'Program Manager at Education NGO',
         image: jaquelinIschImage,
       },
       {
-        name: 'Dianne Guilianelli',
-        role: 'General Manager at Initech',
+        name: 'NGO Representative 3',
+        role: 'Director at Healthcare NGO',
         image: dianneGuilianelliImage,
       },
       {
-        name: 'Ronni Cantadore',
-        role: 'Design Engineer at Weyland-Yutani',
+        name: 'NGO Representative 4',
+        role: 'Head of Technology at Environmental NGO',
         image: ronniCantadoreImage,
       },
       {
-        name: 'Erhart Cockrin',
-        role: 'Product Lead at Cyberdyne Systems',
+        name: 'NGO Representative 5',
+        role: 'Innovation Lead at Community NGO',
         image: erhartCockrinImage,
       },
       {
-        name: 'Parker Johnson',
-        role: 'UI Designer at MomCorp',
+        name: 'NGO Representative 6',
+        role: 'Digital Director at Youth NGO',
         image: parkerJohnsonImage,
       },
     ],
   },
   {
-    name: 'Speakers & Workshops',
-    date: 'April 5',
-    dateTime: '2022-04-05',
+    name: 'Technical Experts',
+    date: 'Phase II',
+    dateTime: '2024-06-19',
     speakers: [
       {
-        name: 'Damaris Kimura',
-        role: 'Senior Engineer at OCP',
+        name: 'AI Expert 1',
+        role: 'AI Research Lead at Stanford',
         image: damarisKimuraImage,
       },
       {
-        name: 'Ibrahim Frasch',
-        role: 'Programmer at Umbrella Corp',
+        name: 'AI Expert 2',
+        role: 'Machine Learning Engineer',
         image: ibrahimFraschImage,
       },
       {
-        name: 'Cathlene Burrage',
-        role: 'Frontend Developer at Buy n Large',
+        name: 'AI Expert 3',
+        role: 'Data Science Director',
         image: cathleneBurrageImage,
       },
       {
-        name: 'Rinaldo Beynon',
-        role: 'Data Scientist at Rekall',
+        name: 'AI Expert 4',
+        role: 'AI Ethics Specialist',
         image: rinaldoBeynonImage,
       },
       {
-        name: 'Waylon Hyden',
-        role: 'DevOps at RDA Corporation',
+        name: 'AI Expert 5',
+        role: 'NLP Research Scientist',
         image: waylonHydenImage,
       },
       {
-        name: 'Giordano Sagucio',
-        role: 'Game Developer at Soylent Corp',
+        name: 'AI Expert 6',
+        role: 'Computer Vision Engineer',
         image: giordanoSagucioImage,
       },
     ],
   },
   {
-    name: 'Interviews',
-    date: 'April 6',
-    dateTime: '2022-04-06',
+    name: 'Mentors & Advisors',
+    date: 'Phase III',
+    dateTime: '2024-07-08',
     speakers: [
       {
-        name: 'Andrew Greene',
-        role: 'Frontend Developer at Ultratech',
+        name: 'Mentor 1',
+        role: 'Senior Software Engineer',
         image: andrewGreeneImage,
       },
       {
-        name: 'Heather Terry',
-        role: 'Backend Developer at Xanatos Enterprises',
+        name: 'Mentor 2',
+        role: 'UX/UI Designer',
         image: heatherTerryImage,
       },
       {
-        name: 'Piers Wilkins',
-        role: 'Full stack Developer at BiffCo',
+        name: 'Mentor 3',
+        role: 'Product Manager',
         image: piersWilkinsImage,
       },
       {
-        name: 'Gordon Sanderson',
-        role: 'Mobile Developer at Cobra Industries',
+        name: 'Mentor 4',
+        role: 'Full Stack Developer',
         image: gordonSandersonImage,
       },
       {
-        name: 'Kimberly Parsons',
-        role: 'Game Developer at Tyrell Corporation',
+        name: 'Mentor 5',
+        role: 'AI Solutions Architect',
         image: kimberlyParsonsImage,
       },
       {
-        name: 'Richard Astley',
-        role: 'CEO at Roll Out',
+        name: 'Mentor 6',
+        role: 'Social Impact Director',
         image: richardAstley,
       },
     ],
@@ -193,11 +193,12 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
           >
-            Expert Workshop Leaders and Mentors
+            Meet Our Partners and Mentors
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Learn from Stanford GSE faculty, industry experts, and experienced
-            mentors who will guide you through the hackathon journey.
+            Connect with NGO partners, technical experts, and experienced
+            mentors who will guide you through the AI4Good journey, from
+            ideation to implementation.
           </p>
         </div>
 
