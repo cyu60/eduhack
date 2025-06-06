@@ -1,11 +1,10 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from '@headlessui/react'
 import clsx from 'clsx'
 
-import { BackgroundImage } from '@/components/BackgroundImage'
-import { Container } from '@/components/Container'
+import { Container } from '@/components/sum25/Container'
 
 interface Day {
   date: React.ReactNode
@@ -21,140 +20,127 @@ interface Day {
 
 const schedule: Array<Day> = [
   {
-    date: 'June 7',
-    dateTime: '2024-06-07',
+    date: 'Phase I: Launch Meeting',
+    dateTime: '2024-06-18',
     summary:
-      'Opening day focused on team formation, challenge introductions, and initial workshops.',
+      'Opening day focused on event introduction, NGO needs sharing, and team building.',
     timeSlots: [
       {
-        name: 'Opening Ceremony',
-        description: 'Introduction to organizations and challenges',
+        name: 'Event Introduction',
+        description: 'Overview of AI4Good event and objectives',
         start: '9:00AM',
         end: '10:00AM',
       },
       {
-        name: 'Team Formation',
-        description: 'Form teams and initial planning',
+        name: 'NGO Partner Presentations',
+        description: 'Sharing real work scenarios and technical requirements',
         start: '10:00AM',
-        end: '11:00AM',
+        end: '11:30AM',
       },
       {
-        name: 'Workshop: GSE Instructor Session',
-        description: 'Led by Sanne Smith (EDS Program Director)',
-        start: '11:00AM',
-        end: '12:00PM',
-      },
-      {
-        name: 'Lunch Break',
-        description: null,
-        start: '12:00PM',
-        end: '1:00PM',
-      },
-      {
-        name: 'Workshop: Tech Integration',
-        description: 'Hands-on guidance with organization tools',
-        start: '1:00PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Project Work Time',
-        description: 'Teams work on solutions with mentor support',
-        start: '2:00PM',
-        end: '5:00PM',
-      },
-      {
-        name: 'Day 1 Wrap-up',
-        description: 'Progress check and next day planning',
-        start: '5:00PM',
-        end: '6:00PM',
-      },
-    ],
-  },
-  {
-    date: 'June 8',
-    dateTime: '2024-06-08',
-    summary:
-      'Development and presentation day with final workshops and project showcase.',
-    timeSlots: [
-      {
-        name: 'Morning Check-in',
-        description: 'Team progress updates',
-        start: '9:00AM',
-        end: '9:30AM',
-      },
-      {
-        name: 'Workshop: Prof. Keith Bowen',
-        description: 'Research insights and applications',
-        start: '9:30AM',
-        end: '10:30AM',
-      },
-      {
-        name: 'Project Work Time',
-        description: 'Final development sprint',
-        start: '10:30AM',
-        end: '12:00PM',
+        name: 'Technical Expert Keynote',
+        description: 'Insights on AI applications in social welfare',
+        start: '11:30AM',
+        end: '12:30PM',
       },
       {
         name: 'Lunch Break',
         description: null,
-        start: '12:00PM',
-        end: '1:00PM',
+        start: '12:30PM',
+        end: '1:30PM',
       },
       {
-        name: 'Project Completion',
-        description: 'Finalize solutions and prepare presentations',
-        start: '1:00PM',
-        end: '2:00PM',
+        name: 'Team Formation',
+        description: 'Connect with like-minded participants',
+        start: '1:30PM',
+        end: '2:30PM',
       },
       {
-        name: 'Project Presentations',
-        description: 'Teams present to judges',
-        start: '2:00PM',
+        name: 'Initial Planning',
+        description: 'Teams begin planning their AI solutions',
+        start: '2:30PM',
         end: '4:00PM',
       },
       {
-        name: 'Closing Ceremony',
-        description: 'Winners announcement and celebrations',
+        name: 'Closing Remarks',
+        description: 'Next steps and competition guidelines',
         start: '4:00PM',
         end: '5:00PM',
       },
     ],
   },
   {
-    date: 'Online Phase',
-    dateTime: '2024-06-09',
-    summary:
-      'Two-week open call for global participants to submit their proposals.',
+    date: 'Phase II: Design Competition',
+    dateTime: '2024-06-19',
+    summary: 'Two-week online competition to design AI solutions for NGOs.',
     timeSlots: [
       {
-        name: 'Submission Period Opens',
-        description: 'Global call for proposals begins',
-        start: 'June 9',
-        end: 'Aug 9',
+        name: 'Competition Start',
+        description: 'Begin designing web pages and applications',
+        start: 'June 19',
+        end: 'June 19',
       },
       {
         name: 'Online Mentorship',
-        description: 'Virtual support from organizations',
-        start: 'June',
-        end: 'August',
+        description: 'Virtual support from technical experts',
+        start: 'June 19',
+        end: 'July 2',
+      },
+      {
+        name: 'Progress Check-ins',
+        description: 'Regular updates with mentors',
+        start: 'June 25',
+        end: 'June 25',
       },
       {
         name: 'Final Submissions',
-        description: 'Deadline for all proposals',
-        start: 'Aug 9',
-        end: 'Aug 9',
+        description: 'Deadline for all project submissions',
+        start: 'July 2',
+        end: 'July 2',
       },
       {
-        name: 'Evaluation Period',
-        description: 'Judging and assessment',
-        start: 'Aug 10',
-        end: 'Aug 20',
+        name: 'Project Evaluation',
+        description: 'Review by NGO partners and experts',
+        start: 'July 3',
+        end: 'July 5',
+      },
+    ],
+  },
+  {
+    date: 'Phase III: Internship',
+    dateTime: '2024-07-08',
+    summary:
+      'Selected participants receive NGO internship opportunities to implement their solutions.',
+    timeSlots: [
+      {
+        name: 'Internship Selection',
+        description: 'NGOs select outstanding participants',
+        start: 'July 8',
+        end: 'July 12',
       },
       {
-        name: 'Winners Announcement',
-        description: 'Final results and awards',
-        start: 'Aug 21',
-        end: 'Aug 21',
+        name: 'Implementation Planning',
+        description: 'Prepare for solution deployment',
+        start: 'July 15',
+        end: 'July 19',
+      },
+      {
+        name: 'Solution Development',
+        description: 'Implement and optimize AI solutions',
+        start: 'July 22',
+        end: 'August 16',
+      },
+      {
+        name: 'Testing & Validation',
+        description: 'Verify solutions in real-world environment',
+        start: 'August 19',
+        end: 'August 23',
+      },
+      {
+        name: 'Final Presentation',
+        description: 'Showcase implemented solutions',
+        start: 'August 26',
+        end: 'August 30',
       },
     ],
   },
@@ -295,29 +281,27 @@ export function Schedule() {
   return (
     <section
       id="schedule"
-      aria-label="Schedule"
-      className="relative py-20 sm:py-32"
+      aria-labelledby="schedule-title"
+      className="py-20 sm:py-32"
     >
-      {/* Background image applied behind the content */}
-      <BackgroundImage className="absolute inset-0" />
-      <Container className="relative z-10">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-4xl lg:pr-24">
-          <h2 className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl">
-            A transformative journey from in-person innovation to global impact.
+      <Container className="relative">
+        <div className="mx-auto max-w-4xl lg:mx-0">
+          <h2
+            id="schedule-title"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+          >
+            Event Schedule
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Join us for an intensive weekend at Stanford GSE, followed by a
-            two-week global open call to reimagine the future of education
-            through technology.
+            Join us for three exciting phases of the AI4Good event, from launch
+            to implementation.
           </p>
         </div>
-      </Container>
-      <div className="relative mt-14 sm:mt-24">
-        <Container className="relative">
+        <div className="mt-14 lg:mt-16">
           <ScheduleTabbed />
           <ScheduleStatic />
-        </Container>
-      </div>
+        </div>
+      </Container>
     </section>
   )
 }
