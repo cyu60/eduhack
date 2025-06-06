@@ -16,25 +16,25 @@ const data = [
     speakers: [
       {
         name: 'Lu Meng',
-        role: 'Communication and Programme Coordinator, Division for Prosperity, UNITAR',
+        role: 'Guest Speaker',
         image: '/images/speakers/lu-meng.jpg',
         linkedin: 'https://www.linkedin.com/in/lu-meng-unitar/',
       },
       {
         name: 'Khaulat Ayomide',
-        role: 'Product Designer & Community Builder',
+        role: 'Guest Speaker',
         image: '/images/speakers/khaulat.jpg',
         linkedin: 'https://www.linkedin.com/in/khaulat/',
       },
       {
         name: 'Jodie Lim',
-        role: 'Product Designer & UX Researcher',
+        role: 'Guest Speaker',
         image: '/images/speakers/jodi.jpg',
         linkedin: 'https://www.linkedin.com/in/jodieous/',
       },
       {
         name: 'Jann Renteria',
-        role: 'Software Engineer @ Stripe, Ex-Meta',
+        role: 'Guest Speaker',
         image: '/images/speakers/jann.jpg',
         linkedin: 'https://www.linkedin.com/in/howdyjann/',
       },
