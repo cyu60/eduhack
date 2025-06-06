@@ -32,7 +32,7 @@ export function Sponsors() {
       <Container>
         {/* Partners Section */}
         <div className="mb-24">
-          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-5xl">
             Organized in Partnership With
           </h2>
           <div className="mx-auto mt-12 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-16">
@@ -61,7 +61,7 @@ export function Sponsors() {
 
         {/* Sponsors Section */}
         <div>
-          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-5xl">
             Our Sponsors
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center text-lg tracking-tight text-[var(--darkRed)]">
