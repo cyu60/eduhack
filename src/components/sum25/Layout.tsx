@@ -1,4 +1,4 @@
-import { Footer } from '@/components/sum25/Footer'
+import Footer from '@/components/main/Footer'
 import { Header } from '@/components/sum25/Header'
 
 export function Layout({

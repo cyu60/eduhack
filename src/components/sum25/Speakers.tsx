@@ -7,134 +7,36 @@ import clsx from 'clsx'
 
 import { Container } from '@/components/sum25/Container'
 import { DiamondIcon } from '@/components/sum25/DiamondIcon'
-import andrewGreeneImage from '@/images/avatars/andrew-greene.jpg'
-import cathleneBurrageImage from '@/images/avatars/cathlene-burrage.jpg'
-import damarisKimuraImage from '@/images/avatars/damaris-kimura.jpg'
-import dianneGuilianelliImage from '@/images/avatars/dianne-guilianelli.jpg'
-import erhartCockrinImage from '@/images/avatars/erhart-cockrin.jpg'
-import giordanoSagucioImage from '@/images/avatars/giordano-sagucio.jpg'
-import gordonSandersonImage from '@/images/avatars/gordon-sanderson.jpg'
-import heatherTerryImage from '@/images/avatars/heather-terry.jpg'
-import ibrahimFraschImage from '@/images/avatars/ibrahim-frasch.jpg'
-import jaquelinIschImage from '@/images/avatars/jaquelin-isch.jpg'
-import kimberlyParsonsImage from '@/images/avatars/kimberly-parsons.jpg'
-import parkerJohnsonImage from '@/images/avatars/parker-johnson.jpg'
-import piersWilkinsImage from '@/images/avatars/piers-wilkins.jpg'
-import richardAstley from '@/images/avatars/richard-astley.jpg'
-import rinaldoBeynonImage from '@/images/avatars/rinaldo-beynon.jpg'
-import ronniCantadoreImage from '@/images/avatars/ronni-cantadore.jpg'
-import stevenMchailImage from '@/images/avatars/steven-mchail.jpg'
-import waylonHydenImage from '@/images/avatars/waylon-hyden.jpg'
 
-const days = [
+const data = [
   {
     name: 'NGO Partners',
     date: 'Phase I',
     dateTime: '2024-06-18',
     speakers: [
       {
-        name: 'NGO Representative 1',
-        role: 'Executive Director at Social Impact NGO',
-        image: stevenMchailImage,
+        name: 'Lu Meng',
+        role: 'Guest Speaker',
+        image: '/images/speakers/lu-meng.jpg',
+        linkedin: 'https://www.linkedin.com/in/lu-meng-unitar/',
       },
       {
-        name: 'NGO Representative 2',
-        role: 'Program Manager at Education NGO',
-        image: jaquelinIschImage,
+        name: 'Khaulat Ayomide',
+        role: 'Guest Speaker',
+        image: '/images/speakers/khaulat.jpg',
+        linkedin: 'https://www.linkedin.com/in/khaulat/',
       },
       {
-        name: 'NGO Representative 3',
-        role: 'Director at Healthcare NGO',
-        image: dianneGuilianelliImage,
+        name: 'Jodie Lim',
+        role: 'Guest Speaker',
+        image: '/images/speakers/jodi.jpg',
+        linkedin: 'https://www.linkedin.com/in/jodieous/',
       },
       {
-        name: 'NGO Representative 4',
-        role: 'Head of Technology at Environmental NGO',
-        image: ronniCantadoreImage,
-      },
-      {
-        name: 'NGO Representative 5',
-        role: 'Innovation Lead at Community NGO',
-        image: erhartCockrinImage,
-      },
-      {
-        name: 'NGO Representative 6',
-        role: 'Digital Director at Youth NGO',
-        image: parkerJohnsonImage,
-      },
-    ],
-  },
-  {
-    name: 'Technical Experts',
-    date: 'Phase II',
-    dateTime: '2024-06-19',
-    speakers: [
-      {
-        name: 'AI Expert 1',
-        role: 'AI Research Lead at Stanford',
-        image: damarisKimuraImage,
-      },
-      {
-        name: 'AI Expert 2',
-        role: 'Machine Learning Engineer',
-        image: ibrahimFraschImage,
-      },
-      {
-        name: 'AI Expert 3',
-        role: 'Data Science Director',
-        image: cathleneBurrageImage,
-      },
-      {
-        name: 'AI Expert 4',
-        role: 'AI Ethics Specialist',
-        image: rinaldoBeynonImage,
-      },
-      {
-        name: 'AI Expert 5',
-        role: 'NLP Research Scientist',
-        image: waylonHydenImage,
-      },
-      {
-        name: 'AI Expert 6',
-        role: 'Computer Vision Engineer',
-        image: giordanoSagucioImage,
-      },
-    ],
-  },
-  {
-    name: 'Mentors & Advisors',
-    date: 'Phase III',
-    dateTime: '2024-07-08',
-    speakers: [
-      {
-        name: 'Mentor 1',
-        role: 'Senior Software Engineer',
-        image: andrewGreeneImage,
-      },
-      {
-        name: 'Mentor 2',
-        role: 'UX/UI Designer',
-        image: heatherTerryImage,
-      },
-      {
-        name: 'Mentor 3',
-        role: 'Product Manager',
-        image: piersWilkinsImage,
-      },
-      {
-        name: 'Mentor 4',
-        role: 'Full Stack Developer',
-        image: gordonSandersonImage,
-      },
-      {
-        name: 'Mentor 5',
-        role: 'AI Solutions Architect',
-        image: kimberlyParsonsImage,
-      },
-      {
-        name: 'Mentor 6',
-        role: 'Social Impact Director',
-        image: richardAstley,
+        name: 'Jann Renteria',
+        role: 'Guest Speaker',
+        image: '/images/speakers/jann.jpg',
+        linkedin: 'https://www.linkedin.com/in/howdyjann/',
       },
     ],
   },
@@ -211,12 +113,12 @@ export function Speakers() {
             <TabList className="grid auto-cols-auto grid-flow-col justify-start gap-x-8 gap-y-10 px-4 whitespace-nowrap sm:mx-auto sm:max-w-2xl sm:grid-cols-3 sm:px-0 sm:text-center lg:grid-flow-row lg:grid-cols-1 lg:text-left">
               {({ selectedIndex }) => (
                 <>
-                  {days.map((day, dayIndex) => (
-                    <div key={day.dateTime} className="relative lg:pl-8">
+                  {data.map((data, dataIndex) => (
+                    <div key={data.dateTime} className="relative lg:pl-8">
                       <DiamondIcon
                         className={clsx(
                           'absolute top-[0.5625rem] left-[-0.5px] hidden h-1.5 w-1.5 overflow-visible lg:block',
-                          dayIndex === selectedIndex
+                          dataIndex === selectedIndex
                             ? 'fill-[var(--red)] stroke-[var(--red)]'
                             : 'fill-transparent stroke-slate-400',
                         )}
@@ -225,21 +127,21 @@ export function Speakers() {
                         <div
                           className={clsx(
                             'font-mono text-sm',
-                            dayIndex === selectedIndex
+                            dataIndex === selectedIndex
                               ? 'text-[var(--red)]'
                               : 'text-slate-500',
                           )}
                         >
                           <Tab className="data-selected:not-data-focus:outline-hidden">
                             <span className="absolute inset-0" />
-                            {day.name}
+                            {data.name}
                           </Tab>
                         </div>
                         <time
-                          dateTime={day.dateTime}
+                          dateTime={data.dateTime}
                           className="mt-1.5 block text-2xl font-semibold tracking-tight text-[var(--darkRed)]"
                         >
-                          {day.date}
+                          {data.date}
                         </time>
                       </div>
                     </div>
@@ -249,7 +151,7 @@ export function Speakers() {
             </TabList>
           </div>
           <TabPanels className="lg:col-span-3">
-            {days.map((day) => (
+            {data.map((day) => (
               <TabPanel
                 key={day.dateTime}
                 className="grid grid-cols-1 gap-x-8 gap-y-10 data-selected:not-data-focus:outline-hidden sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3"
@@ -257,38 +159,50 @@ export function Speakers() {
               >
                 {day.speakers.map((speaker, speakerIndex) => (
                   <div key={speakerIndex}>
-                    <div className="group relative h-[17.5rem] transform overflow-hidden rounded-4xl">
-                      <div
-                        className={clsx(
-                          'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                          [
-                            'border-red-800',
-                            'border-red-800',
-                            'border-red-800',
-                          ][speakerIndex % 3],
-                        )}
-                      />
-                      <div
-                        className="absolute inset-0 bg-indigo-50"
-                        style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
-                      >
-                        <Image
-                          className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
-                          src={speaker.image}
-                          alt=""
-                          priority
-                          sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
+                      <div className="relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+                        <div
+                          className={clsx(
+                            'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
+                            [
+                              'border-red-800',
+                              'border-red-800',
+                              'border-red-800',
+                            ][speakerIndex % 3],
+                          )}
                         />
+                        <div
+                          className="absolute inset-0 bg-indigo-50"
+                          style={{ clipPath: `url(#${id}-${speakerIndex % 3})` }}
+                        >
+                          <Image
+                            className="absolute inset-0 h-full w-full object-cover transition duration-300 group-hover:scale-110"
+                            src={speaker.image}
+                            alt={speaker.name}
+                            priority
+                            sizes="(min-width: 1280px) 17.5rem, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                            width={400}
+                            height={400}
+                          />
+                        </div>
                       </div>
-                    </div>
-                    <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
-                      {speaker.name}
-                    </h3>
-                    <p className="mt-1 text-base tracking-tight text-slate-500">
-                      {speaker.role}
-                    </p>
+                      <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900 group-hover:text-[var(--red)]">
+                        {speaker.name}
+                      </h3>
+                      <p className="mt-1 text-base tracking-tight text-slate-500">
+                        {speaker.role}
+                      </p>
+                    </a>
                   </div>
                 ))}
+                <div>
+                  <h3 className="mt-8 font-display text-xl font-bold tracking-tight text-slate-900">
+                    More Coming Soon!
+                  </h3>
+                  <p className="mt-1 text-base tracking-tight text-slate-500">
+                    Stay tuned as we announce more amazing partners and mentors
+                  </p>
+                </div>
               </TabPanel>
             ))}
           </TabPanels>
