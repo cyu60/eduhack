@@ -1,5 +1,7 @@
 # [EduHack 2025](https://www.eduhack.org/)
 
+> In partenrship with **Stanford Learning Fund** and **Stanford Founders**
+
 **EduHack 2025** — a global AI-powered hackathon-meets-simulation that empowers diverse, interdisciplinary teams to build the future of education. This is not just a competition—it's a research-backed training ground for the next generation of innovators.
 
 ## 🌍 What is EduHack?
