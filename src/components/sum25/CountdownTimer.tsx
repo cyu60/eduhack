@@ -55,7 +55,7 @@ export function CountdownTimer() {
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="countdown-title"
-            className="font-display text-xl font-semibold tracking-tighter text-[var(--darkRed)] sm:text-5xl"
+            className="font-display text-xl font-semibold tracking-tighter text-[var(--darkRed)] sm:text-2xl"
           >
             Event Starts In
           </h2>
