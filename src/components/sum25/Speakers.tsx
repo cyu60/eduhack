@@ -17,7 +17,7 @@ const data = [
       {
         name: 'Lu Meng',
         role: 'Programme Coordinator at UNITAR',
-        image: '/images/speakers/lu-meng.jpg',
+        image: '/images/speakers/unitar.png',
         linkedin: 'https://www.linkedin.com/in/lu-meng-unitar/',
       },
       {
