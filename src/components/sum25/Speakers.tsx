@@ -16,25 +16,25 @@ const data = [
     speakers: [
       {
         name: 'Lu Meng',
-        role: 'Guest Speaker',
+        role: 'Programme Coordinator at UNITAR',
         image: '/images/speakers/lu-meng.jpg',
         linkedin: 'https://www.linkedin.com/in/lu-meng-unitar/',
       },
       {
-        name: 'Khaulat Ayomide',
-        role: 'Guest Speaker',
+        name: 'Khaulat Abdulhakeem',
+        role: 'Founder at Khaulat Abode',
         image: '/images/speakers/khaulat.jpg',
         linkedin: 'https://www.linkedin.com/in/khaulat/',
       },
       {
-        name: 'Jodie Lim',
-        role: 'Guest Speaker',
+        name: 'Jodie Anderson Jr.',
+        role: 'Co-Founder at rézme',
         image: '/images/speakers/jodi.jpg',
         linkedin: 'https://www.linkedin.com/in/jodieous/',
       },
       {
-        name: 'Jann Renteria',
-        role: 'Guest Speaker',
+        name: 'Jessica Ann',
+        role: 'Stanford AI Tinker',
         image: '/images/speakers/jann.jpg',
         linkedin: 'https://www.linkedin.com/in/howdyjann/',
       },
