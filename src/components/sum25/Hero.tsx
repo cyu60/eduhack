@@ -24,9 +24,7 @@ export function Hero() {
             technical talents.
           </p>
           <p>
-            A collaborative initiative by Stanford ACL and EduHack to bridge the
-            gap between AI technology and social welfare, creating meaningful
-            impact through innovative solutions.
+            Let's get involve in bridging the gap between AI technology and social welfare, creating meaningful impact through innovative solutions.
           </p>
         </div>
 
