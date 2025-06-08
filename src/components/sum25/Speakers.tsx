@@ -66,7 +66,7 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="py-20 sm:py-32"
+      className="py-10 sm:py-24"
     >
       <ImageClipPaths id={id} />
       <Container>
@@ -84,7 +84,7 @@ export function Speakers() {
           </p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3">
+        <div className="mt-14 max-w-6xl mx-auto grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3">
           {speakers.map((speaker, speakerIndex) => (
             <div key={speakerIndex}>
               <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
