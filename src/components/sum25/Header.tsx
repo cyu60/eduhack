@@ -33,7 +33,7 @@ export function Header() {
 
         {/* Right: Register Button */}
         <div className="hidden sm:flex">
-          <Button variant="cream" href="https://tinyurl.com/48uabmfc" className="bg-[var(--cream)]">
+          <Button variant="cream" href="https://lu.ma/a8x369mf" className="bg-[var(--cream)]">
             Register Now
           </Button>
         </div>
