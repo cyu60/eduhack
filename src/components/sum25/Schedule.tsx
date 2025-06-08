@@ -20,127 +20,44 @@ interface Day {
 
 const schedule: Array<Day> = [
   {
-    date: 'Phase I: Launch Meeting',
-    dateTime: '2024-06-18',
+    date: 'EduHack Workshop Day',
+    dateTime: '2025-06-13',
     summary:
-      'Opening day focused on event introduction, NGO needs sharing, and team building.',
+      'A hands-on workshop exploring AI tools in education through collaborative learning and experimentation.',
     timeSlots: [
       {
-        name: 'Event Introduction',
-        description: 'Overview of AI4Good event and objectives',
-        start: '9:00AM',
-        end: '10:00AM',
+        name: 'Opening Ceremony & Kickoff',
+        description:
+          'Welcome & introductions, EduHack overview, panelist discussion on AI and education, team formation, and research consent information',
+        start: '1:00PM',
+        end: '1:45PM',
       },
       {
-        name: 'NGO Partner Presentations',
-        description: 'Sharing real work scenarios and technical requirements',
-        start: '10:00AM',
-        end: '11:30AM',
+        name: 'Team Warm-Up + Icebreaker',
+        description:
+          'Form groups of 3 and share thoughts on tools that changed how you learn',
+        start: '1:45PM',
+        end: '2:00PM',
       },
       {
-        name: 'Technical Expert Keynote',
-        description: 'Insights on AI applications in social welfare',
-        start: '11:30AM',
-        end: '12:30PM',
-      },
-      {
-        name: 'Lunch Break',
-        description: null,
-        start: '12:30PM',
-        end: '1:30PM',
-      },
-      {
-        name: 'Team Formation',
-        description: 'Connect with like-minded participants',
-        start: '1:30PM',
-        end: '2:30PM',
-      },
-      {
-        name: 'Initial Planning',
-        description: 'Teams begin planning their AI solutions',
-        start: '2:30PM',
+        name: 'Main Workshop: Vibe Coding with GPT',
+        description:
+          'Hands-on AI workshop building GPT-powered tools with mentor support',
+        start: '2:00PM',
         end: '4:00PM',
       },
       {
-        name: 'Closing Remarks',
-        description: 'Next steps and competition guidelines',
+        name: 'Midway Feedback + Peer Insights',
+        description:
+          'Progress check-ins, peer interaction survey, and optional team feedback',
         start: '4:00PM',
-        end: '5:00PM',
-      },
-    ],
-  },
-  {
-    date: 'Phase II: Design Competition',
-    dateTime: '2024-06-19',
-    summary: 'Two-week online competition to design AI solutions for NGOs.',
-    timeSlots: [
-      {
-        name: 'Competition Start',
-        description: 'Begin designing web pages and applications',
-        start: 'June 19',
-        end: 'June 19',
+        end: '4:30PM',
       },
       {
-        name: 'Online Mentorship',
-        description: 'Virtual support from technical experts',
-        start: 'June 19',
-        end: 'July 2',
-      },
-      {
-        name: 'Progress Check-ins',
-        description: 'Regular updates with mentors',
-        start: 'June 25',
-        end: 'June 25',
-      },
-      {
-        name: 'Final Submissions',
-        description: 'Deadline for all project submissions',
-        start: 'July 2',
-        end: 'July 2',
-      },
-      {
-        name: 'Project Evaluation',
-        description: 'Review by NGO partners and experts',
-        start: 'July 3',
-        end: 'July 5',
-      },
-    ],
-  },
-  {
-    date: 'Phase III: Internship',
-    dateTime: '2024-07-08',
-    summary:
-      'Selected participants receive NGO internship opportunities to implement their solutions.',
-    timeSlots: [
-      {
-        name: 'Internship Selection',
-        description: 'NGOs select outstanding participants',
-        start: 'July 8',
-        end: 'July 12',
-      },
-      {
-        name: 'Implementation Planning',
-        description: 'Prepare for solution deployment',
-        start: 'July 15',
-        end: 'July 19',
-      },
-      {
-        name: 'Solution Development',
-        description: 'Implement and optimize AI solutions',
-        start: 'July 22',
-        end: 'August 16',
-      },
-      {
-        name: 'Testing & Validation',
-        description: 'Verify solutions in real-world environment',
-        start: 'August 19',
-        end: 'August 23',
-      },
-      {
-        name: 'Final Presentation',
-        description: 'Showcase implemented solutions',
-        start: 'August 26',
-        end: 'August 30',
+        name: 'Rapid Team Showcase',
+        description: '3-minute team demonstrations with peer judging',
+        start: '4:30PM',
+        end: '5:15PM',
       },
     ],
   },
@@ -282,24 +199,47 @@ export function Schedule() {
     <section
       id="schedule"
       aria-labelledby="schedule-title"
-      className="py-20 sm:py-32"
+      className="py-8 sm:py-12"
     >
-      <Container className="relative">
-        <div className="mx-auto max-w-4xl lg:mx-0">
+      <Container className="relative w-full px-0">
+        <div className="mb-12 w-full text-center">
           <h2
             id="schedule-title"
-            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+            className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed,#b91c1c)]"
           >
             Event Schedule
           </h2>
-          <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Join us for three exciting phases of the AI4Good event, from launch
-            to implementation.
-          </p>
         </div>
-        <div className="mt-14 lg:mt-16">
-          <ScheduleTabbed />
-          <ScheduleStatic />
+        <div className="flex w-full flex-col items-center">
+          {schedule.map((day) => (
+            <section key={day.dateTime} className="mx-auto w-full max-w-6xl">
+              <div className="flex w-full flex-col px-6">
+                {day.timeSlots.map((slot, idx) => (
+                  <div
+                    key={slot.start}
+                    className="mb-6 flex flex-col items-center rounded-2xl border-2 border-[var(--red,#dc2626)] bg-white p-8 shadow-lg transition-transform hover:scale-105"
+                  >
+                    <h4 className="mb-2 text-center text-xl font-semibold text-[var(--red,#dc2626)]">
+                      {slot.name}
+                    </h4>
+                    <p className="mb-4 text-center text-base text-[var(--darkRed,#b91c1c)]">
+                      {slot.description}
+                    </p>
+                    <div className="rounded bg-[var(--lightRed,#ffe5e5)] px-4 py-2 font-mono text-sm text-[var(--gray,#4b4b4b)]">
+                      <time dateTime={`${day.dateTime}T${slot.start}-08:00`}>
+                        {slot.start}
+                      </time>
+                      {' — '}
+                      <time dateTime={`${day.dateTime}T${slot.end}-08:00`}>
+                        {slot.end}
+                      </time>
+                      {' PST'}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
       </Container>
     </section>
