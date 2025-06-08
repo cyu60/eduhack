@@ -13,7 +13,13 @@ const partners = [
     logo: '/stanford-founders-logo.png',
     link: 'https://stanfordfounders.stanford.edu/',
     dimensions: { width: 200, height: 100 },
-  }
+  },
+  {
+    name: 'Modo Academy',
+    logo: '/modo-logo.png',
+    link: 'https://joinmodo.com/',
+    dimensions: { width: 200, height: 100 },
+  },
 ]
 
 export function Sponsors() {
@@ -25,7 +31,7 @@ export function Sponsors() {
           <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
             Organized in Partnership With
           </h2>
-          <div className="mx-auto mt-12 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-16 md:grid-cols-2">
+          <div className="mx-auto mt-12 flex flex-row flex-wrap justify-center items-center gap-8 sm:gap-x-16">
             {partners.map((partner) => (
               <a
                 key={partner.name}
