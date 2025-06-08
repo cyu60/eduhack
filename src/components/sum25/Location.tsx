@@ -1,7 +1,7 @@
 export default function Location() {
     return (
-        <div className="mt-12 max-w-6xl mx-auto">
-            <h2 className="mb-4 text-4xl font-bold text-[var(--darkRed)]">
+        <div className="mt-12 max-w-6xl mx-auto pt-8">
+            <h2 className="m-4 text-5xl font-medium text-[var(--darkRed)]">
                 Event Location
             </h2>
             <div className="h-[400px] w-full overflow-hidden rounded-lg shadow-lg">

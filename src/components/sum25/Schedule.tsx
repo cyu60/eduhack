@@ -201,11 +201,11 @@ export function Schedule() {
       aria-labelledby="schedule-title"
       className="py-8 sm:py-12"
     >
-      <Container className="relative w-full px-0">
+      <Container className="relative w-full px-0 pt-8">
         <div className="mb-12 w-full text-center">
           <h2
             id="schedule-title"
-            className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed,#b91c1c)]"
+            className="font-display text-5xl font-medium tracking-tighter text-[var(--darkRed,#b91c1c)]"
           >
             Event Schedule
           </h2>

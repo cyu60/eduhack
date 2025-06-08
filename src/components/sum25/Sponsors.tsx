@@ -22,7 +22,7 @@ export function Sponsors() {
       <Container>
         {/* Partners Section */}
         <div>
-          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-5xl">
+          <h2 className="mx-auto max-w-2xl text-center font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl">
             Organized in Partnership With
           </h2>
           <div className="mx-auto mt-12 grid max-w-max grid-cols-1 place-content-center gap-x-32 gap-y-16 md:grid-cols-2">

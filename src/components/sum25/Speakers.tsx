@@ -66,14 +66,14 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="py-10 sm:py-24"
+      className="py-10 sm:py-24 max-w-6xl mx-auto"
     >
       <ImageClipPaths id={id} />
       <Container>
         <div className="mx-auto max-w-4xl lg:mx-0">
           <h2
             id="speakers-title"
-            className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
+            className="font-display text-4xl font-medium tracking-tighter text-[var(--darkRed)] sm:text-5xl"
           >
             Meet Our Guest Speakers
           </h2>
