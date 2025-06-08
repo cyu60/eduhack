@@ -13,7 +13,7 @@ const speakers = [
     linkedin: 'https://www.linkedin.com/in/lulumeng0923/?originalSubdomain=cn',
   },
   {
-    name: 'Khaulat Abdulhakeem', 
+    name: 'Khaulat Abdulhakeem',
     role: 'Founder at Khaulat Abode',
     image: '/images/speakers/khaulat.jpg',
     linkedin: 'https://www.linkedin.com/in/khaulat/',
@@ -66,7 +66,7 @@ export function Speakers() {
     <section
       id="speakers"
       aria-labelledby="speakers-title"
-      className="py-10 sm:py-24 max-w-6xl mx-auto"
+      className="mx-auto max-w-6xl py-10 sm:py-24"
     >
       <ImageClipPaths id={id} />
       <Container>
@@ -78,25 +78,28 @@ export function Speakers() {
             Meet Our Guest Speakers
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Connect with technical experts, and experienced
-            mentors who will guide you through the AI4Good journey, from
-            ideation to implementation.
+            Connect with technical experts, and experienced mentors who will
+            guide you through the AI4Good journey, from ideation to
+            implementation.
           </p>
         </div>
 
-        <div className="mt-14 max-w-6xl mx-auto grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-6xl grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 sm:gap-y-16 md:grid-cols-3">
           {speakers.map((speaker, speakerIndex) => (
             <div key={speakerIndex}>
-              <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="block group cursor-pointer">
-                <div className="relative h-[17.5rem] transform overflow-hidden rounded-4xl">
+              <a
+                href={speaker.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block cursor-pointer"
+              >
+                <div className="relative h-[15rem] transform overflow-hidden rounded-4xl sm:h-[17.5rem]">
                   <div
                     className={clsx(
                       'absolute top-0 right-4 bottom-6 left-0 rounded-4xl border transition duration-300 group-hover:scale-95 xl:right-6',
-                      [
-                        'border-red-800',
-                        'border-red-800',
-                        'border-red-800',
-                      ][speakerIndex % 3],
+                      ['border-red-800', 'border-red-800', 'border-red-800'][
+                        speakerIndex % 3
+                      ],
                     )}
                   />
                   <div

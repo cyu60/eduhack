@@ -59,30 +59,30 @@ export function CountdownTimer() {
           >
             Event Starts In
           </h2>
-          <div className="mt-4 grid grid-cols-4 gap-5">
-            <div className="rounded-lg bg-[var(--cream)] p-4">
-              <div className="text-7xl font-bold text-[var(--darkRed)]">
+          <div className="mt-4 flex flex-row gap-2 sm:gap-5 overflow-x-auto">
+            <div className="flex-1 rounded-lg bg-[var(--cream)] p-2 sm:p-4">
+              <div className="text-3xl sm:text-7xl font-bold text-[var(--darkRed)]">
                 {String(timeLeft.days).padStart(2, '0')}
               </div>
-              <div className="text-lg text-[var(--gray)]">Days</div>
+              <div className="text-xs sm:text-lg text-[var(--gray)]">Days</div>
             </div>
-            <div className="rounded-lg bg-[var(--cream)] p-4">
-              <div className="text-7xl font-bold text-[var(--darkRed)]">
+            <div className="flex-1 rounded-lg bg-[var(--cream)] p-2 sm:p-4">
+              <div className="text-3xl sm:text-7xl font-bold text-[var(--darkRed)]">
                 {String(timeLeft.hours).padStart(2, '0')}
               </div>
-              <div className="text-lg text-[var(--gray)]">Hours</div>
+              <div className="text-xs sm:text-lg text-[var(--gray)]">Hours</div>
             </div>
-            <div className="rounded-lg bg-[var(--cream)] p-4">
-              <div className="text-7xl font-bold text-[var(--darkRed)]">
+            <div className="flex-1 rounded-lg bg-[var(--cream)] p-2 sm:p-4">
+              <div className="text-3xl sm:text-7xl font-bold text-[var(--darkRed)]">
                 {String(timeLeft.minutes).padStart(2, '0')}
               </div>
-              <div className="text-lg text-[var(--gray)]">Minutes</div>
+              <div className="text-xs sm:text-lg text-[var(--gray)]">Minutes</div>
             </div>
-            <div className="rounded-lg bg-[var(--cream)] p-4">
-              <div className="text-7xl font-bold text-[var(--darkRed)]">
+            <div className="flex-1 rounded-lg bg-[var(--cream)] p-2 sm:p-4">
+              <div className="text-3xl sm:text-7xl font-bold text-[var(--darkRed)]">
                 {String(timeLeft.seconds).padStart(2, '0')}
               </div>
-              <div className="text-lg text-[var(--gray)]">Seconds</div>
+              <div className="text-xs sm:text-lg text-[var(--gray)]">Seconds</div>
             </div>
           </div>
         </div>
