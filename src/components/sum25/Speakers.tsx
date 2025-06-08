@@ -75,10 +75,10 @@ export function Speakers() {
             id="speakers-title"
             className="font-display text-4xl font-medium tracking-tighter text-[var(--red)] sm:text-5xl"
           >
-            Meet Our Partners and Mentors
+            Meet Our Guest Speakers
           </h2>
           <p className="mt-4 font-display text-2xl tracking-tight text-[var(--gray)]">
-            Connect with NGO partners, technical experts, and experienced
+            Connect with technical experts, and experienced
             mentors who will guide you through the AI4Good journey, from
             ideation to implementation.
           </p>
