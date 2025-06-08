@@ -13,7 +13,7 @@ export function Hero() {
       </div>
       <Container className="lg:max-w-8xl relative mx-auto max-w-6xl px-6 lg:px-12">
         <h1 className="font-display text-5xl font-bold tracking-tighter text-[var(--darkRed)] sm:text-7xl">
-          <span className="hidden">EduHack - </span>AI4Good Event
+          EduHack 
         </h1>
 
         <div className="mt-6 space-y-6 font-display text-2xl tracking-tight text-[var(--gray)]">
