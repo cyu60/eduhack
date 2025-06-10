@@ -13,9 +13,9 @@ export function Header() {
           <Image
             src={headerLogo}
             alt="EduHack"
-            width={90}
-            height={9}
-            className="mr-2 sm:w-[120px] sm:h-[12px]"
+            width={150}
+            height={90}
+            className="mr-2 sm:w-[120px]"
           />
         </div>
 
