@@ -15,6 +15,7 @@ interface Day {
     description: string | null
     start: string
     end: string
+    link?: string
   }>
 }
 
@@ -29,35 +30,29 @@ const schedule: Array<Day> = [
         name: 'Opening Ceremony & Kickoff',
         description:
           'Welcome & introductions, EduHack overview, panelist discussion on AI and education, team formation, and research consent information',
-        start: '1:00PM',
-        end: '1:45PM',
+        start: '3:00PM',
+        end: '3:45PM',
       },
       {
         name: 'Team Warm-Up + Icebreaker',
         description:
           'Form groups of 3 and share thoughts on tools that changed how you learn',
-        start: '1:45PM',
-        end: '2:00PM',
-      },
-      {
-        name: 'Main Workshop: Vibe Coding with GPT',
-        description:
-          'Hands-on AI workshop building GPT-powered tools with mentor support',
-        start: '2:00PM',
+        start: '3:45PM',
         end: '4:00PM',
       },
       {
-        name: 'Midway Feedback + Peer Insights',
+        name: 'Vibe Coding Workshop',
         description:
-          'Progress check-ins, peer interaction survey, and optional team feedback',
+          'Hands-on AI workshop building GPT-powered tools with mentor support',
         start: '4:00PM',
-        end: '4:30PM',
+        end: '5:00PM',
       },
       {
-        name: 'Rapid Team Showcase',
-        description: '3-minute team demonstrations with peer judging',
-        start: '4:30PM',
-        end: '5:15PM',
+        name: "Stanford Founders' AI Startup School Afterparty",
+        description: 'Join us at Tresidder for networking and celebration',
+        start: '6:00PM',
+        end: '8:00PM',
+        link: 'https://lu.ma/1iaqi0i4'
       },
     ],
   },
@@ -175,6 +170,16 @@ function TimeSlots({ day, className }: { day: Day; className?: string }) {
             </time>{' '}
             PST
           </p>
+          {timeSlot.link && (
+            <a 
+              href={timeSlot.link}
+              target="_blank"
+              rel="noopener noreferrer" 
+              className="mt-2 inline-block text-blue-600 hover:underline"
+            >
+              Event Details →
+            </a>
+          )}
         </li>
       ))}
     </ol>
@@ -209,6 +214,9 @@ export function Schedule() {
           >
             Event Schedule
           </h2>
+          <p className="mt-4 text-lg text-[var(--darkRed,#b91c1c)]">
+            📍 Kickoff (In-person)
+          </p>
         </div>
         <div className="flex w-full flex-col items-center">
           {schedule.map((day) => (
@@ -229,12 +237,26 @@ export function Schedule() {
                       <time dateTime={`${day.dateTime}T${slot.start}-08:00`}>
                         {slot.start}
                       </time>
-                      {' — '}
-                      <time dateTime={`${day.dateTime}T${slot.end}-08:00`}>
-                        {slot.end}
-                      </time>
+                      {slot.end && (
+                        <>
+                          {' — '}
+                          <time dateTime={`${day.dateTime}T${slot.end}-08:00`}>
+                            {slot.end}
+                          </time>
+                        </>
+                      )}
                       {' PST'}
                     </div>
+                    {slot.link && (
+                      <a
+                        href={slot.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-4 text-blue-600 hover:underline"
+                      >
+                        Event Details →
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
