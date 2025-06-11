@@ -23,8 +23,7 @@ export function Header() {
         <div className="flex flex-col items-center text-white font-mono text-xs sm:text-sm">
           <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
             <p>
-              <time dateTime="2024-06-07">13</time>–
-              <time dateTime="2024-06-08">14 June, 2025</time>
+              <time dateTime="2024-06-18">18 June 2025</time>
             </p>
             <span className="hidden sm:inline">|</span>
             <p>Stanford GSE, CERAS</p>
