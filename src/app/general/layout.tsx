@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: 'EduHack',
   },
   description:
-    "Stanford GSE's first hackathon that bridges education and technology to create mutual impact.",
+    'Join us in exploring how AI can better serve non-profit organizations. Connect technological innovation with social welfare and become part of the next generation of socially responsible technical talents.',
 }
 
 export default function RootLayout({
