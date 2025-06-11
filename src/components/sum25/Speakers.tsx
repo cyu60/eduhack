@@ -14,7 +14,7 @@ const speakers = [
   },
   {
     name: 'Khaulat Abdulhakeem',
-    role: 'Founder at Khaulat Abode',
+    role: 'Founder at Khaulat’s Abode',
     image: '/images/speakers/khaulat.jpg',
     linkedin: 'https://www.linkedin.com/in/khaulat/',
   },
