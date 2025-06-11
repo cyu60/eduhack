@@ -9,7 +9,7 @@ const speakers = [
   {
     name: 'Lu Meng',
     role: 'Programme Coordinator at UNITAR',
-    image: '/images/speakers/unitarhq_logo.jpg',
+    image: '/images/speakers/unitar_rep.jpg',
     linkedin: 'https://www.linkedin.com/in/lulumeng0923/?originalSubdomain=cn',
   },
   {
