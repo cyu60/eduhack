@@ -13,7 +13,7 @@ const speakers = [
     linkedin: 'https://www.linkedin.com/in/lulumeng0923/?originalSubdomain=cn',
   },
   {
-    name: 'Khaulat\'s Abode',
+    name: 'Khaulat Abdulhakeem',
     role: 'Founder at Khaulat\'s Abode',
     image: '/images/speakers/khaulat.jpg',
     linkedin: 'https://www.linkedin.com/in/khaulat/',
