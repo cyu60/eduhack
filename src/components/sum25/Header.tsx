@@ -34,7 +34,7 @@ export function Header() {
         <div className="hidden sm:flex">
           <Button 
             variant="cream" 
-            href="https://lu.ma/a8x369mf" 
+            href="https://www.mentormates.ai/events/eduhack/overview" 
             className="bg-[var(--cream)] text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2"
           >
             Register Now

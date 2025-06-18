@@ -36,7 +36,7 @@ export function Hero() {
           </div>
 
           <Button className="mt-10 w-full sm:hidden">
-            <Link href="/register">Register Now</Link>
+            <Link href="https://www.mentormates.ai/events/eduhack/overview">Register Now</Link>
           </Button>
 
           {/* Partner slider */}
