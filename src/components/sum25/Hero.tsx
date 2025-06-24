@@ -30,7 +30,7 @@ export function Hero() {
 
         <div className="mt-8 flex justify-center gap-6">
           <Link
-            href="https://lu.ma/a8x369mf"
+            href="https://www.mentormates.ai/events/eduhack/overview"
             target="_blank"
             rel="noopener noreferrer"
             className="rounded-full bg-[var(--red)] px-6 py-2 text-lg font-semibold text-white hover:bg-[var(--darkRed)] focus:ring-2 focus:ring-[var(--red)] focus:ring-offset-2 focus:outline-none"
