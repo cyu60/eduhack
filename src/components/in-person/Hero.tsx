@@ -35,10 +35,18 @@ export function Hero() {
             </div>
             </div>
             {/* Mission Section (revealed on scroll) */}
-            <MissionSection />
-            <TutorialSection />
-            <BenefitsSection />
-            <LogisticsSection />
+            <div className="my-2">
+                <MissionSection />
+            </div>
+            <div className="my-2">
+                <TutorialSection />
+            </div>
+            <div className="my-2">
+                <BenefitsSection />
+            </div>
+            <div className="my-2">
+                <LogisticsSection />
+            </div>
         </Container>
         </div>
   )
